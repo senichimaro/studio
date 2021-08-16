@@ -4,9 +4,13 @@ import {
   Route
 } from 'react-router-dom'
 
+
 import HomePage from './UI/pages/HomePage'
 
+
+
 function App() {
+  
   return (
     <Router>
       <Switch>
@@ -14,7 +18,7 @@ function App() {
         <Route exact path="/">
           <HomePage />
         </Route>
-        
+
       </Switch>
     </Router>
   );

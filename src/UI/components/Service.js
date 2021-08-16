@@ -4,10 +4,7 @@
 
 
 
-const PreLoader = () => {
-
-
-  const $ = window.$;
+const Service = () => {
 
   return (
 
@@ -95,4 +92,4 @@ const PreLoader = () => {
   )
 }
 
-export default PreLoader
+export default Service

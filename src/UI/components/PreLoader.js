@@ -1,13 +1,13 @@
 
 
 
+import $ from 'jquery/dist/jquery.min.js'
 
 
 
 const PreLoader = () => {
 
 
-  const $ = window.$;
 
   //===== Prealoder
   $(window).on('load', function(event) {

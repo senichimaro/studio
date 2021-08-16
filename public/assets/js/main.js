@@ -2,11 +2,11 @@ $(function() {
 
     "use strict";
 
-    // //===== Prealoder
-    //
-    // $(window).on('load', function(event) {
-    //     $('.preloader').delay(500).fadeOut(500);
-    // });
+    //===== Prealoder
+
+    $(window).on('load', function(event) {
+        $('.preloader').delay(500).fadeOut(500);
+    });
 
 
     //===== Mobile Menu
@@ -39,23 +39,23 @@ $(function() {
     });
 
 
-    //===== Section Menu Active
-    //
-    // var scrollLink = $('.page-scroll');
-    //     // Active link switching
-    //     $(window).scroll(function() {
-    //     var scrollbarLocation = $(this).scrollTop();
-    //
-    //     scrollLink.each(function() {
-    //
-    //       var sectionOffset = $(this.hash).offset().top - 90;
-    //
-    //       if ( sectionOffset <= scrollbarLocation ) {
-    //         $(this).parent().addClass('active');
-    //         $(this).parent().siblings().removeClass('active');
-    //       }
-    //     });
-    // });
+    // ===== Section Menu Active
+
+    var scrollLink = $('.page-scroll');
+        // Active link switching
+        $(window).scroll(function() {
+        var scrollbarLocation = $(this).scrollTop();
+
+        scrollLink.each(function() {
+
+          var sectionOffset = $(this.hash).offset().top - 90;
+
+          if ( sectionOffset <= scrollbarLocation ) {
+            $(this).parent().addClass('active');
+            $(this).parent().siblings().removeClass('active');
+          }
+        });
+    });
 
 
     //===== wow
