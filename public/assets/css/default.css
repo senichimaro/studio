@@ -1,3 +1,9 @@
+
+:root {
+	--white: var(--white);
+}
+
+
 /* Deafult Margin & Padding */
 /*-- Margin Top --*/
 .mt-5 {
@@ -879,10 +885,10 @@
 /* Background Color */
 
 .gray-bg {
-	background: rgba(235, 54, 86, 0.03137254901960784);
+	background: var(--white);
 }
 .white-bg {
-	background: #fff;
+	background: var(--white);
 }
 .black-bg {
 	background: #222;
@@ -890,7 +896,7 @@
 /* Color */
 
 .white {
-	color: #fff;
+	color: var(--white);
 }
 .black {
 	color: #222;

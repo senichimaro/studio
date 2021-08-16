@@ -17,7 +17,24 @@
 
 -----------------------------------------------------------------------------------*/
 /*===========================
-    1. COMMON css 
+    0. CSS Variables
+===========================*/
+
+:root {
+  --white: #fff;
+
+  --primary: #57837B;
+  --elevation: #B2AB8C;
+  --empty: #C9D8B6;
+  --contrast: #515E63;
+
+  --secondary: #1687A7;
+  --ternary: #47597E;
+}
+
+
+/*===========================
+    1. COMMON css
 ===========================*/
 @import url("https://fonts.googleapis.com/css?family=Barlow:300,400,500,600,700|Hind:400,500,600,700|Quattrocento:400,700");
 body {
@@ -114,7 +131,7 @@ p {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border: 1px solid #EB3656;
+  border: 1px solid var(--primary);
   padding: 0 30px;
   font-size: 16px;
   line-height: 48px;
@@ -126,31 +143,31 @@ p {
   -ms-transition: all 0.4s ease-out 0s;
   -o-transition: all 0.4s ease-out 0s;
   transition: all 0.4s ease-out 0s;
-  background-color: #EB3656;
-  -webkit-box-shadow: 0px 5px 16px 0px rgba(235, 54, 86, 0.65);
-  -moz-box-shadow: 0px 5px 16px 0px rgba(235, 54, 86, 0.65);
-  box-shadow: 0px 5px 16px 0px rgba(235, 54, 86, 0.65);
+  background-color: var(--primary);
+  -webkit-box-shadow: 0px 5px 16px 0px var(--contrast);
+  -moz-box-shadow: 0px 5px 16px 0px var(--contrast);
+  box-shadow: 0px 5px 16px 0px var(--contrast);
   font-family: 'Barlow', sans-serif;
   text-transform: uppercase; }
   .main-btn i {
     margin-right: 5px; }
   .main-btn:hover {
     background-color: #fff;
-    color: #EB3656;
-    border-color: #EB3656; }
+    color: var(--primary);
+    border-color: var(--primary); }
   .main-btn.main-btn-2 {
     background-color: #fff;
-    color: #EB3656;
-    border-color: #EB3656; }
+    color: var(--primary);
+    border-color: var(--primary); }
     .main-btn.main-btn-2:hover {
-      background-color: #EB3656;
-      border-color: #EB3656;
+      background-color: var(--primary);
+      border-color: var(--primary);
       color: #fff; }
 
 /*===== All Section Title Style =====*/
 .section-title .sub-title {
   font-size: 18px;
-  color: #EB3656;
+  color: var(--primary);
   text-transform: uppercase; }
   @media (max-width: 767px) {
     .section-title .sub-title {
@@ -250,7 +267,7 @@ p {
       height: 100%;
       border-style: solid;
       /* Spinner Color */
-      border-color: #EB3656 #EB3656 #ededed;
+      border-color: var(--primary) var(--primary) #ededed;
       border-radius: 50%;
       border-width: 6px; }
     .preloader .loader_34 .ytp-spinner-left .ytp-spinner-circle {
@@ -468,7 +485,7 @@ p {
     transform: rotate(-130deg); } }
 
 /*===========================
-    2.HEADER css 
+    2.HEADER css
 ===========================*/
 .header-area {
   position: relative; }
@@ -531,9 +548,9 @@ p {
   .navigation-bar.sticky {
     position: fixed;
     background-color: #fff;
-    -webkit-box-shadow: 0px 5px 21px 0px rgba(254, 119, 101, 0.2);
-    -moz-box-shadow: 0px 5px 21px 0px rgba(254, 119, 101, 0.2);
-    box-shadow: 0px 5px 21px 0px rgba(254, 119, 101, 0.2);
+    -webkit-box-shadow: 0px 5px 21px 0px var(--elevation);
+    -moz-box-shadow: 0px 5px 21px 0px var(--elevation);
+    box-shadow: 0px 5px 21px 0px var(--elevation);
     z-index: 99;
     padding: 15px 0; }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -573,9 +590,9 @@ p {
       background-color: #fff;
       padding: 5px 15px;
       z-index: 9;
-      -webkit-box-shadow: 0px 5px 25px 0px rgba(244, 128, 74, 0.3);
-      -moz-box-shadow: 0px 5px 25px 0px rgba(244, 128, 74, 0.3);
-      box-shadow: 0px 5px 25px 0px rgba(244, 128, 74, 0.3); } }
+      -webkit-box-shadow: 0px 5px 25px 0px var(--elevation);
+      -moz-box-shadow: 0px 5px 25px 0px var(--elevation);
+      box-shadow: 0px 5px 25px 0px var(--elevation); } }
   @media (max-width: 767px) {
     .navbar .navbar-collapse {
       position: absolute;
@@ -585,9 +602,9 @@ p {
       background-color: #fff;
       padding: 5px 15px;
       z-index: 9;
-      -webkit-box-shadow: 0px 5px 25px 0px rgba(244, 128, 74, 0.3);
-      -moz-box-shadow: 0px 5px 25px 0px rgba(244, 128, 74, 0.3);
-      box-shadow: 0px 5px 25px 0px rgba(244, 128, 74, 0.3); } }
+      -webkit-box-shadow: 0px 5px 25px 0px var(--elevation);
+      -moz-box-shadow: 0px 5px 25px 0px var(--elevation);
+      box-shadow: 0px 5px 25px 0px var(--elevation); } }
   .navbar .navbar-nav .nav-item {
     margin-right: 30px; }
     @media only screen and (min-width: 992px) and (max-width: 1200px) {
@@ -600,7 +617,7 @@ p {
       .navbar .navbar-nav .nav-item {
         margin: 5px 0; } }
     .navbar .navbar-nav .nav-item a {
-      color: #646464;
+      color: var(--elevation);
       font-family: 'Hind', sans-serif;
       font-size: 15px;
       text-transform: uppercase;
@@ -614,7 +631,7 @@ p {
         .navbar .navbar-nav .nav-item a {
           font-size: 13px; } }
     .navbar .navbar-nav .nav-item.active a, .navbar .navbar-nav .nav-item:hover a {
-      color: #EB3656; }
+      color: var(--primary); }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .navbar .navbar-btn {
       position: absolute;
@@ -646,7 +663,7 @@ p {
     z-index: 9; }
     .header-banner .banner-content .sub-title {
       font-size: 24px;
-      color: #EB3656;
+      color: var(--primary);
       text-transform: uppercase; }
       @media (max-width: 767px) {
         .header-banner .banner-content .sub-title {
@@ -654,7 +671,7 @@ p {
     .header-banner .banner-content .banner-title {
       font-size: 60px; }
       .header-banner .banner-content .banner-title span {
-        color: #EB3656; }
+        color: var(--primary); }
       @media (max-width: 767px) {
         .header-banner .banner-content .banner-title {
           font-size: 38px; } }
@@ -663,7 +680,7 @@ p {
       font-size: 15px;
       font-weight: 600;
       font-family: 'Barlow', sans-serif;
-      color: #EB3656;
+      color: var(--primary);
       text-transform: uppercase;
       margin-left: 70px; }
       .header-banner .banner-content .banner-contact::before {
@@ -671,7 +688,7 @@ p {
         content: '';
         width: 60px;
         height: 2px;
-        background-color: #EB3656;
+        background-color: var(--primary);
         left: -70px;
         top: 50%;
         -webkit-transform: translateY(-50%);
@@ -681,7 +698,7 @@ p {
         transform: translateY(-50%); }
 
 /*===========================
-    3.ABOUT css 
+    3.ABOUT css
 ===========================*/
 @media (max-width: 767px) {
   .about-area {
@@ -772,7 +789,7 @@ p {
           .about-image .about-btn .main-btn span {
             font-size: 28px; } }
       .about-image .about-btn .main-btn:hover {
-        border-color: #EB3656; }
+        border-color: var(--primary); }
       @media (max-width: 767px) {
         .about-image .about-btn .main-btn {
           line-height: 48px;
@@ -788,7 +805,7 @@ p {
 
 .about-content .about-welcome {
   font-size: 24px;
-  color: #EB3656;
+  color: var(--primary);
   text-transform: uppercase; }
   @media (max-width: 767px) {
     .about-content .about-welcome {
@@ -802,7 +819,7 @@ p {
       font-size: 26px; } }
 
 /*===========================
-      4.SERVICES css 
+      4.SERVICES css
 ===========================*/
 @media (max-width: 767px) {
   .services-area {
@@ -825,7 +842,7 @@ p {
       padding: 30px 10px; } }
   .single-services .services-icon i {
     font-size: 52px;
-    color: #EB3656;
+    color: var(--primary);
     -webkit-transition: all 0.4s ease-out 0s;
     -moz-transition: all 0.4s ease-out 0s;
     -ms-transition: all 0.4s ease-out 0s;
@@ -841,7 +858,7 @@ p {
     -o-transition: all 0.4s ease-out 0s;
     transition: all 0.4s ease-out 0s; }
   .single-services:hover {
-    background-color: #EB3656; }
+    background-color: var(--primary); }
     .single-services:hover .services-icon i {
       color: #fff; }
     .single-services:hover .services-content .services-title,
@@ -849,7 +866,7 @@ p {
       color: #fff; }
 
 /*===========================
-      5.PROJECT css 
+      5.PROJECT css
 ===========================*/
 @media (max-width: 767px) {
   .project-area {
@@ -866,9 +883,9 @@ p {
       width: 100%;
       height: 100%;
       background: white;
-      background: -webkit-linear-gradient(rgba(255, 255, 255, 0) 50%, #eb3656 100%);
-      background: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, #eb3656 100%);
-      background: linear-gradient(rgba(255, 255, 255, 0) 50%, #eb3656 100%);
+      background: -webkit-linear-gradient(rgba(255, 255, 255, 0) 50%, var(--primary) 100%);
+      background: -o-linear-gradient(rgba(255, 255, 255, 0) 50%, var(--primary) 100%);
+      background: linear-gradient(rgba(255, 255, 255, 0) 50%, var(--primary) 100%);
       opacity: 0;
       -webkit-transition: all 0.4s ease-out 0s;
       -moz-transition: all 0.4s ease-out 0s;
@@ -928,7 +945,7 @@ p {
       height: 15px;
       border-radius: 50px;
       border: 0;
-      background-color: rgba(235, 54, 86, 0.7);
+      background-color: var(--empty);
       -webkit-transition: all 0.4s ease-out 0s;
       -moz-transition: all 0.4s ease-out 0s;
       -ms-transition: all 0.4s ease-out 0s;
@@ -938,10 +955,10 @@ p {
       cursor: pointer; }
     .project-active .slick-dots li.slick-active button {
       width: 35px;
-      background-color: #EB3656; }
+      background-color: var(--primary); }
 
 /*===========================
-        6.TEAM css 
+        6.TEAM css
 ===========================*/
 @media (max-width: 767px) {
   .team-area {
@@ -975,7 +992,7 @@ p {
     -o-transition: all 0.4s ease-out 0s;
     transition: all 0.4s ease-out 0s; }
     .single-team .team-content .team-name a:hover {
-      color: #EB3656; }
+      color: var(--primary); }
   .single-team .team-content .sub-title {
     font-size: 14px;
     color: #646464; }
@@ -1006,22 +1023,22 @@ p {
         -o-transition: all 0.4s ease-out 0s;
         transition: all 0.4s ease-out 0s; }
         .single-team .team-content .social li a:hover {
-          background-color: #EB3656;
+          background-color: var(--primary);
           color: #fff; }
 
 .single-team:hover .team-content {
   background-color: #fff;
   margin-top: -60px;
-  -webkit-box-shadow: 0px 6px 16px 0px rgba(235, 54, 86, 0.34);
-  -moz-box-shadow: 0px 6px 16px 0px rgba(235, 54, 86, 0.34);
-  box-shadow: 0px 6px 16px 0px rgba(235, 54, 86, 0.34); }
+  -webkit-box-shadow: 0px 6px 16px 0px var(--elevation);
+  -moz-box-shadow: 0px 6px 16px 0px var(--elevation);
+  box-shadow: 0px 6px 16px 0px var(--elevation); }
   .single-team:hover .team-content .social {
     margin-top: 25px;
     opacity: 1;
     visibility: visible; }
 
 /*===========================
-      7.TESTIMONIAL css 
+      7.TESTIMONIAL css
 ===========================*/
 .testimonial-area {
   position: relative; }
@@ -1058,7 +1075,7 @@ p {
   z-index: 9; }
 
 .testimonial-active {
-  background-color: #EB3656;
+  background-color: var(--primary);
   padding: 60px 30px; }
   @media (max-width: 767px) {
     .testimonial-active {
@@ -1076,13 +1093,13 @@ p {
     display: inline-block; }
     .single-testimonial .testimonial-image .quota i {
       font-size: 18px;
-      color: #EB3656;
+      color: var(--primary);
       width: 30px;
       height: 30px;
       line-height: 28px;
       text-align: center;
       background-color: #fff;
-      border: 2px solid #EB3656;
+      border: 2px solid var(--primary);
       border-radius: 50%; }
 
 .single-testimonial .testimonial-content p {
@@ -1125,7 +1142,7 @@ p {
       width: 25px; }
 
 /*===========================
-       8.CONTACT css 
+       8.CONTACT css
 ===========================*/
 @media (max-width: 767px) {
   .contact-area {
@@ -1175,7 +1192,7 @@ p.form-message.error {
   color: #f00; }
 
 /*===========================
-         9.MAP css 
+         9.MAP css
 ===========================*/
 .map-area {
   position: relative;
@@ -1216,7 +1233,7 @@ p.form-message.error {
   right: 0; }
 
 /*===========================
-       10.FOOTER css 
+       10.FOOTER css
 ===========================*/
 @media (max-width: 767px) {
   .footer-widget {
@@ -1255,19 +1272,19 @@ p.form-message.error {
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
-    background-color: #fff5f1;
+    background-color: var(--empty);
     color: #646464;
     font-size: 16px;
-    -webkit-box-shadow: 0px 5px 21px 0px rgba(254, 119, 101, 0.4);
-    -moz-box-shadow: 0px 5px 21px 0px rgba(254, 119, 101, 0.4);
-    box-shadow: 0px 5px 21px 0px rgba(254, 119, 101, 0.4);
+    -webkit-box-shadow: 0px 5px 21px 0px var(--elevation);
+    -moz-box-shadow: 0px 5px 21px 0px var(--elevation);
+    box-shadow: 0px 5px 21px 0px var(--elevation);
     -webkit-transition: all 0.4s ease-out 0s;
     -moz-transition: all 0.4s ease-out 0s;
     -ms-transition: all 0.4s ease-out 0s;
     -o-transition: all 0.4s ease-out 0s;
     transition: all 0.4s ease-out 0s; }
     .footer-logo .footer-social li a:hover {
-      background-color: #EB3656;
+      background-color: var(--primary);
       color: #fff; }
 
 .f-title .title {
@@ -1287,7 +1304,7 @@ p.form-message.error {
     -o-transition: all 0.4s ease-out 0s;
     transition: all 0.4s ease-out 0s; }
     .footer-link ul li a:hover {
-      color: #EB3656; }
+      color: var(--primary); }
 
 .footer-newsleter p {
   line-height: 26px;
@@ -1299,8 +1316,8 @@ p.form-message.error {
     width: 100%;
     height: 50px;
     padding: 0 20px;
-    border: 1px solid #EB3656;
-    background-color: #ffeae1; }
+    border: 1px solid var(--primary);
+    background-color: var(--empty); }
   .footer-newsleter .newsleter button {
     border: 0;
     width: 66px;
@@ -1311,7 +1328,7 @@ p.form-message.error {
     position: absolute;
     top: 0;
     right: 0;
-    color: #EB3656;
+    color: var(--primary);
     font-size: 20px;
     line-height: 57px;
     cursor: pointer; }
@@ -1325,7 +1342,7 @@ p.form-message.error {
       left: 0;
       width: 1px;
       height: 36px;
-      background-color: #EB3656;
+      background-color: var(--primary);
       -webkit-transform: translateY(-50%);
       -moz-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
@@ -1356,7 +1373,7 @@ p.form-message.error {
   -o-transition: all 0.4s ease-out 0s;
   transition: all 0.4s ease-out 0s;
   color: #fff;
-  background-color: #EB3656; }
+  background-color: var(--primary); }
   .back-to-top:hover {
-    color: #EB3656;
+    color: var(--primary);
     background-color: #fff; }

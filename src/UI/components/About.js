@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { about } from '../data/data'
 
 
 
@@ -19,7 +20,7 @@ const About = () => {
                             <img src={about1} alt="About" />
                         </div>
                         <div data-aos="fade-right" className="about-btn">
-                            <Link className="main-btn" to="#"><span>27</span> Years Experience</Link>
+                            <Link className="main-btn" to="#" dangerouslySetInnerHTML={{__html:about.cta}}></Link>
                         </div>
                         <div className="single-image image-tow float-right">
                             <img src={about2} alt="About" />
@@ -28,11 +29,10 @@ const About = () => {
                 </div>
                 <div className="col-lg-6">
                     <div className="about-content mt-45">
-                        <h4 className="about-welcome">About Us </h4>
-                        <h3 className="about-title mt-10">Reasons to choose</h3>
-                        <p className="mt-25">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages
-                            <br /> <br />It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                        <Link className="main-btn mt-25" to="#">learn more</Link>
+                        <h4 className="about-welcome">{about.h4} </h4>
+                        <h3 className="about-title mt-10">{about.h3}</h3>
+                        <p className="mt-25" dangerouslySetInnerHTML={{__html:about.para}}></p>
+                        <Link className="main-btn mt-25" to={about.link.hash}>{about.link.text}</Link>
                     </div>
                 </div>
             </div>
