@@ -11,7 +11,7 @@ import image5 from "../assets/images/project/p-5.jpg"
 
 
 
-const Project = () => {
+const Project = ({visibility}) => {
 
   const images = {
     image1: image1,
@@ -21,33 +21,39 @@ const Project = () => {
     image5: image5
   }
 
-  return (
+  if ( visibility ){
+    return (
 
-    <section id="project" className="project-area pt-125 pb-130">
-        <div className="container">
-            <div className="row justify-content-center">
-                <div className="col-lg-6">
-                    <div className="section-title text-center pb-50">
-                        <h5 className="sub-title mb-15">{projects.h5}</h5>
-                        <h2 className="title">{projects.h2}</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="container-fluid">
-            <div className="row project-active">
+      <section id="project" className="project-area pt-125 pb-130">
+          <div className="container">
+              <div className="row justify-content-center">
+                  <div className="col-lg-6">
+                      <div className="section-title text-center pb-50">
+                          <h5 className="sub-title mb-15">{projects.h5}</h5>
+                          <h2 className="title">{projects.h2}</h2>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div className="container-fluid">
+              <div className="row project-active">
 
-                {
-                  projects.cards.map(({image, link, hash}) => (
-                    <CardItem image={images[image]} link={link} hash={hash} key={link} />
-                  ))
-                }
+                  {
+                    projects.cards.map(({image, link, hash}, key) => (
+                      <CardItem image={images[image]} link={link} hash={hash} key={key} />
+                    ))
+                  }
 
-            </div>
-        </div>
-    </section>
+              </div>
+          </div>
+      </section>
 
-  )
+    )
+  }
+  else {
+    return false
+  }
+
 }
 
 function CardItem({image, link, hash}){

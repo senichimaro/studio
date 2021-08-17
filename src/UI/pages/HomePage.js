@@ -2,15 +2,16 @@
 
 import {
   nav,
+  preloader,
   header,
   about,
   services,
   projects,
   team,
   testimonial,
-  // Contact,
-  // Map,
-  // Footer
+  contact,
+  map,
+  footer
 } from '../data/data'
 
 
@@ -32,17 +33,17 @@ const HomePage = () => {
 
   return (
     <>
-      <Nav />
-      <PreLoader />
-      <Header />
-      <About />
-      <Service />
-      <Project />
+      <Nav visibility={nav.visibility} />
+      <PreLoader visibility={preloader.visibility} />
+      <Header visibility={header.visibility} />
+      <About visibility={about.visibility} />
+      <Service visibility={services.visibility} />
+      <Project visibility={projects.visibility} />
       <Team visibility={team.visibility} />
       <Testimonial visibility={testimonial.visibility} />
-      <Contact />
-      <Map />
-      <Footer />
+      <Contact visibility={contact.visibility} />
+      <Map visibility={map.visibility} />
+      <Footer visibility={footer.visibility} />
     </>
   )
 }

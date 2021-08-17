@@ -4,33 +4,39 @@ import { services } from '../data/data'
 
 
 
-const Service = () => {
+const Service = ({visibility}) => {
 
-  return (
+  if ( visibility ){
+    return (
 
-    <section id="service" className="services-area pt-125 pb-130 gray-bg">
-        <div className="container">
-            <div className="row justify-content-center">
-                <div className="col-lg-6">
-                    <div className="section-title text-center pb-20">
-                        <h5 className="sub-title mb-15">{services.h5}</h5>
-                        <h2 className="title">{services.h2}</h2>
-                    </div>
-                </div>
-            </div>
-            <div className="row justify-content-center">
+      <section id="service" className="services-area pt-125 pb-130 gray-bg">
+          <div className="container">
+              <div className="row justify-content-center">
+                  <div className="col-lg-6">
+                      <div className="section-title text-center pb-20">
+                          <h5 className="sub-title mb-15">{services.h5}</h5>
+                          <h2 className="title">{services.h2}</h2>
+                      </div>
+                  </div>
+              </div>
+              <div className="row justify-content-center">
 
-              {
-                services.cards.map(({icon, title, para, delay}) => (
-                  <CardElement icon={icon} title={title} para={para} delay={delay} />
-                ))
-              }
+                {
+                  services.cards.map(({icon, title, para, delay}) => (
+                    <CardElement icon={icon} title={title} para={para} delay={delay} key={title}/>
+                  ))
+                }
 
-            </div>
-        </div>
-    </section>
+              </div>
+          </div>
+      </section>
 
-  )
+    )
+  }
+  else {
+    return false
+  }
+
 }
 
 

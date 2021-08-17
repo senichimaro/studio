@@ -1,5 +1,6 @@
 module.exports = {
   nav:{
+    visibility:true,
     phone:"+98 222 4444",
     routes:[
       {
@@ -34,7 +35,11 @@ module.exports = {
       }
     ]
   },
+  preloader:{
+    visibility:true,
+  },
   header:{
+    visibility:true,
     h4:"Your trusted",
     h1:"<span>Interior</span> Design Partner for Home or Office",
     link:{
@@ -43,6 +48,7 @@ module.exports = {
     }
   },
   about:{
+    visibility:true,
     cta:'<span>27</span> Years Experience',
     h4:'About Us',
     h3:'Reasons to choose',
@@ -53,6 +59,7 @@ module.exports = {
     }
   },
   services:{
+    visibility:true,
     h5:'Our Services',
     h2:'What We Do?',
     cards:[
@@ -95,6 +102,7 @@ module.exports = {
     ]
   },
   projects:{
+    visibility:true,
     h5:'Featured Works',
     h2:'Projects You May Love',
     cards:[
@@ -247,5 +255,87 @@ module.exports = {
         subtitle:'CEO, Alo'
       }
     ]
+  },
+  contact:{
+    visibility:true
+  },
+  map:{
+    visibility:true
+  },
+  footer:{
+    visibility:true,
+    cardsLeft:{
+      info:[
+        {
+          icon:'lni-phone-handset',
+          content:'+1880 123 456 789'
+        },
+        {
+          icon:'lni-envelope',
+          content:'contact@yourmail.com'
+        },
+        {
+          icon:'lni-map',
+          content:'1234 Avenue New York, US'
+        }
+      ],
+      social:[
+        {
+          hash:'#',
+          icon:'lni-facebook-filled'
+        },
+        {
+          hash:'#',
+          icon:'lni-twitter-original'
+        },
+        {
+          hash:'#',
+          icon:'lni-google'
+        },
+        {
+          hash:'#',
+          icon:'lni-instagram'
+        }
+      ]
+    },
+    cardsCenterLeft:{
+      title:'Essential Links',
+      links:[
+        {
+          hash:'#',
+          name:'About'
+        },
+        {
+          hash:'#',
+          name:'Projects'
+        },
+        {
+          hash:'#',
+          name:'Support'
+        }
+      ]
+    },
+    cardsCenterRight:{
+      title:'Services',
+      links:[
+        {
+          hash:'#',
+          name:'Product Design'
+        },
+        {
+          hash:'#',
+          name:'Research'
+        },
+        {
+          hash:'#',
+          name:'Office Management'
+        }
+      ]
+    },
+    cardRight:{
+      title:'Newsleter',
+      para:'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.',
+      formIcon:'lni-angle-double-right'
+    }
   }
 }

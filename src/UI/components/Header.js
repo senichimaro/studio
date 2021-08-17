@@ -11,48 +11,54 @@ import shape4 from "../assets/images/banner/shape/shape-4.png"
 
 
 
-const Header = () => {
+const Header = ({visibility}) => {
 
-  return (
+  if ( visibility ){
+    return (
 
-    <header id="home" className="header-area pt-100">
+      <header id="home" className="header-area pt-100">
 
-        <div className="shape header-shape-one">
-            {/*<img src={shape1} alt="shape" />*/}
-        </div>
+          <div className="shape header-shape-one">
+              {/*<img src={shape1} alt="shape" />*/}
+          </div>
 
-        <div className="shape header-shape-tow animation-one">
-            {/*<img src={shape2} alt="shape" />*/}
-        </div>
+          <div className="shape header-shape-tow animation-one">
+              {/*<img src={shape2} alt="shape" />*/}
+          </div>
 
-        <div className="shape header-shape-three animation-one">
-            {/*<img src={shape3} alt="shape" />*/}
-        </div>
+          <div className="shape header-shape-three animation-one">
+              {/*<img src={shape3} alt="shape" />*/}
+          </div>
 
-        <div className="shape header-shape-fore">
-            {/*<img src={shape4} alt="shape" />*/}
-        </div>
+          <div className="shape header-shape-fore">
+              {/*<img src={shape4} alt="shape" />*/}
+          </div>
 
-        {/* Navigation */}
+          {/* Navigation */}
 
-        <div className="header-banner d-flex align-items-center">
-            <div className="container">
-                <div className="row">
-                    <div className="col-xl-8 col-lg-9 col-sm-10">
-                        <div className="banner-content">
-                            <h4 className="sub-title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">{header.h4}</h4>
-                            <h1 dangerouslySetInnerHTML={{__html:header.h1}} className="banner-title mt-10 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="2s"></h1>
-                            <Link className="banner-contact mt-25 page-scroll" data-wow-duration="1.5s" data-wow-delay="2.3s" to={header.link.hash}>{header.link.text}</Link>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="banner-image bg_cover" style={{backgroundImage:`url(${backgroundImage})`}}></div>
-        </div>
+          <div className="header-banner d-flex align-items-center">
+              <div className="container">
+                  <div className="row">
+                      <div className="col-xl-8 col-lg-9 col-sm-10">
+                          <div className="banner-content">
+                              <h4 className="sub-title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1s">{header.h4}</h4>
+                              <h1 dangerouslySetInnerHTML={{__html:header.h1}} className="banner-title mt-10 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="2s"></h1>
+                              <Link className="banner-contact mt-25 page-scroll" data-wow-duration="1.5s" data-wow-delay="2.3s" to={header.link.hash}>{header.link.text}</Link>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div className="banner-image bg_cover" style={{backgroundImage:`url(${backgroundImage})`}}></div>
+          </div>
 
-    </header>
+      </header>
 
-  )
+    )
+  }
+  else {
+    return false
+  }
+
 }
 
 
