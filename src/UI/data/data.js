@@ -93,5 +93,46 @@ module.exports = {
         delay:'1.2s'
       }
     ]
+  },
+  projects:{
+    h5:'Featured Works',
+    h2:'Projects You May Love',
+    cards:[
+      {
+        image:'image1',
+        hash:'#',
+        link:'Home Interior Design'
+      },
+      {
+        image:'image2',
+        hash:'#',
+        link:'Home Interior Design'
+      },
+      {
+        image:'image3',
+        hash:'#',
+        link:'Home Interior Design'
+      },
+      {
+        image:'image4',
+        hash:'#',
+        link:'Home Interior Design'
+      },
+      {
+        image:'image5',
+        hash:'#',
+        link:'Home Interior Design'
+      },
+      {
+        image:'image4',
+        hash:'#',
+        link:'Home Interior Design'
+      },
+      {
+        image:'image2',
+        hash:'#',
+        link:'Home Interior Design'
+      }
+    ]
   }
 }

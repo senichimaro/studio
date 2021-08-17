@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { projects } from '../data/data'
 
 
 import image1 from "../assets/images/project/p-1.jpg"
@@ -12,7 +13,13 @@ import image5 from "../assets/images/project/p-5.jpg"
 
 const Project = () => {
 
-
+  const images = {
+    image1: image1,
+    image2: image2,
+    image3: image3,
+    image4: image4,
+    image5: image5
+  }
 
   return (
 
@@ -21,88 +28,40 @@ const Project = () => {
             <div className="row justify-content-center">
                 <div className="col-lg-6">
                     <div className="section-title text-center pb-50">
-                        <h5 className="sub-title mb-15">Featured Works</h5>
-                        <h2 className="title">Projects You May Love</h2>
+                        <h5 className="sub-title mb-15">{projects.h5}</h5>
+                        <h2 className="title">{projects.h2}</h2>
                     </div>
                 </div>
             </div>
         </div>
         <div className="container-fluid">
             <div className="row project-active">
-                <div className="col-lg-4">
-                    <div className="single-project">
-                        <div className="project-image">
-                            <img src={image1} alt="Project" />
-                        </div>
-                        <div className="project-content">
-                            <Link className="project-title" to="#">Home Interior Design</Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-4">
-                    <div className="single-project">
-                        <div className="project-image">
-                            <img src={image2} alt="Project" />
-                        </div>
-                        <div className="project-content">
-                            <Link className="project-title" to="#">Home Interior Design</Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-4">
-                    <div className="single-project">
-                        <div className="project-image">
-                            <img src={image3} alt="Project" />
-                        </div>
-                        <div className="project-content">
-                            <Link className="project-title" to="#">Home Interior Design</Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-4">
-                    <div className="single-project">
-                        <div className="project-image">
-                            <img src={image4} alt="Project" />
-                        </div>
-                        <div className="project-content">
-                            <Link className="project-title" to="#">Home Interior Design</Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-4">
-                    <div className="single-project">
-                        <div className="project-image">
-                            <img src={image5} alt="Project" />
-                        </div>
-                        <div className="project-content">
-                            <Link className="project-title" to="#">Home Interior Design</Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-4">
-                    <div className="single-project">
-                        <div className="project-image">
-                            <img src={image4} alt="Project" />
-                        </div>
-                        <div className="project-content">
-                            <Link className="project-title" to="#">Home Interior Design</Link>
-                        </div>
-                    </div>
-                </div>
-                <div className="col-lg-4">
-                    <div className="single-project">
-                        <div className="project-image">
-                            <img src={image2} alt="Project" />
-                        </div>
-                        <div className="project-content">
-                            <Link className="project-title" to="#">Home Interior Design</Link>
-                        </div>
-                    </div>
-                </div>
+
+                {
+                  projects.cards.map(({image, link, hash}) => (
+                    <CardItem image={images[image]} link={link} hash={hash} key={link} />
+                  ))
+                }
+
             </div>
         </div>
     </section>
 
+  )
+}
+
+function CardItem({image, link, hash}){
+  return (
+    <div className="col-lg-4">
+        <div className="single-project">
+            <div className="project-image">
+                <img src={image} alt="Project" />
+            </div>
+            <div className="project-content">
+                <Link className="project-title" to={hash}>{link}</Link>
+            </div>
+        </div>
+    </div>
   )
 }
 
