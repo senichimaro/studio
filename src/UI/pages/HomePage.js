@@ -1,4 +1,20 @@
 
+
+import {
+  nav,
+  header,
+  about,
+  services,
+  projects,
+  team,
+  testimonial,
+  // Contact,
+  // Map,
+  // Footer
+} from '../data/data'
+
+
+import Nav from '../components/Nav'
 import PreLoader from '../components/PreLoader'
 import Header from '../components/Header'
 import About from '../components/About'
@@ -9,7 +25,6 @@ import Testimonial from '../components/Testimonial'
 import Contact from '../components/Contact'
 import Map from '../components/Map'
 import Footer from '../components/Footer'
-import Nav from '../components/Nav'
 
 
 
@@ -23,8 +38,8 @@ const HomePage = () => {
       <About />
       <Service />
       <Project />
-      <Team />
-      <Testimonial />
+      <Team visibility={team.visibility} />
+      <Testimonial visibility={testimonial.visibility} />
       <Contact />
       <Map />
       <Footer />

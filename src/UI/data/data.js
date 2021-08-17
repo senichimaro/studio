@@ -134,5 +134,118 @@ module.exports = {
         link:'Home Interior Design'
       }
     ]
+  },
+  team:{
+    visibility: true,
+    h5:'Meet The Team',
+    h2:'Our Expert Designers',
+    cards:[
+      {
+        delay:'0.4s',
+        image:'image1',
+        link:'Rob Hope',
+        subtitle:'CEO & Founder',
+        social:[
+          {
+            hash:'#',
+            icon:'lni-facebook-filled'
+          },
+          {
+            hash:'#',
+            icon:'lni-twitter-original'
+          },
+          {
+            hash:'#',
+            icon:'lni-linkedin-original'
+          }
+        ]
+      },
+      {
+        delay:'0.8s',
+        image:'image2',
+        link:'Patric Green',
+        subtitle:'Chief Designer',
+        social:[
+          {
+            hash:'#',
+            icon:'lni-facebook-filled'
+          },
+          {
+            hash:'#',
+            icon:'lni-twitter-original'
+          },
+          {
+            hash:'#',
+            icon:'lni-linkedin-original'
+          }
+        ]
+      },
+      {
+        delay:'1.2s',
+        image:'image3',
+        link:'Daryl Dixon',
+        subtitle:'Consultant',
+        social:[
+          {
+            hash:'#',
+            icon:'lni-facebook-filled'
+          },
+          {
+            hash:'#',
+            icon:'lni-twitter-original'
+          },
+          {
+            hash:'#',
+            icon:'lni-linkedin-original'
+          }
+        ]
+      },
+      {
+        delay:'1.6s',
+        image:'image4',
+        link:'Mark Parker',
+        subtitle:'Intern',
+        social:[
+          {
+            hash:'#',
+            icon:'lni-facebook-filled'
+          },
+          {
+            hash:'#',
+            icon:'lni-twitter-original'
+          },
+          {
+            hash:'#',
+            icon:'lni-linkedin-original'
+          }
+        ]
+      }
+    ]
+  },
+  testimonial:{
+    visibility:true,
+    cards:[
+      {
+        image:'t1',
+        icon:'lni-quotation',
+        para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
+        h5:'Fajar',
+        subtitle:'Random Customer'
+      },
+      {
+        image:'t2',
+        icon:'lni-quotation',
+        para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
+        h5:'Alina',
+        subtitle:'Tesla Motors'
+      },
+      {
+        image:'t3',
+        icon:'lni-quotation',
+        para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
+        h5:'Celina',
+        subtitle:'CEO, Alo'
+      }
+    ]
   }
 }
