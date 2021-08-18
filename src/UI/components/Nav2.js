@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import {
   Link,
   useRouteMatch
@@ -10,28 +9,55 @@ import logo from "../assets/images/logo.png"
 
 
 const Nav = ({visibility}) => {
-  const [ isRoutes, setIsRoutes ] = useState([])
 
   const { path } = useRouteMatch();
   console.log("path",path);
+  // const routes = nav.routes.filter( route => route.location[0].location === path )
+  const routes = nav.routes.filter( route => locationFilter( route ) )
+  function locationFilter( item ){
+    // item.location.map( location => {
+    //   if ( location.location === path ){
+    //     console.log("location",location)
+    //     console.log("item",item)
+    //     return item
+    //   }
+    // })
 
+    // let els = item.location.map( location => {
+    //   if ( location.location === path ){
+    //     console.log("location",location)
+    //     console.log("item",item)
+    //     return item
+    //   }
+    //   else { return null }
+    // })
+    // console.log("els",els)
+    // if ( els ){ return els }
 
-  useEffect(() => {
-    const handleRoutes = async () => {
-      let routes = []
-      const rawRoutes = nav.routes.map( item => mapItems( item ) )
-      function mapItems( item ){
-        if ( Array.isArray( item.location )  ){
-          item.location.map( child => { return childItems( child ) } )
-          function childItems( child ){
-            if ( child.location === path ){ item.location = child; routes.push( item ) }
-          }
-        }
+    // console.log("item.location",item.location)
+    // let els = item.location.forEach( location => console.log("location",location) )
+    let els = item.location.forEach( location => {
+      if ( location.location === path ){
+        console.log("location",location)
+        console.log("item",item)
+        return item
       }
-      setIsRoutes( routes )
+      // else { return null }
+    })
+    console.log("let els",els)
+    if ( els ){
+      console.log("if els",els)
+      return els
     }
-    handleRoutes()
-  },[])
+
+    // const el = item.location.filter( location => location === path )
+    // console.log("el",el);
+    // item.location.map( location => console.log("location",location) )
+    // if ( item.location[0].location === path ) return item
+    // if ( el.location[0].location === path ) return item
+    // console.log("item",item);
+  }
+  console.log("routes",routes);
 
   if ( visibility ){
     return (
@@ -55,7 +81,7 @@ const Nav = ({visibility}) => {
                               <ul id="nav" className="navbar-nav ml-auto">
 
                                 {
-                                  isRoutes.map(({hash, name}) => (
+                                  routes.map(({hash, name}) => (
                                     <NavItems hash={hash} name={name} key={hash} />
                                   ))
                                 }

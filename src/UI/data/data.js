@@ -7,11 +7,8 @@ module.exports = {
         location:[
           {
             location:'/',
-            route:'/'
-          },
-          {
-            location:'/about',
-            route:'/'
+            route:'/',
+            name:'Home'
           }
         ],
         url:'/',
@@ -22,7 +19,8 @@ module.exports = {
         location:[
           {
             location:'/',
-            route:'/'
+            route:'/',
+            name:'About'
           }
         ],
         url:'/',
@@ -33,7 +31,8 @@ module.exports = {
         location:[
           {
             location:'/',
-            route:'/'
+            route:'/',
+            name:'Services'
           }
         ],
         url:'/',
@@ -44,7 +43,8 @@ module.exports = {
         location:[
           {
             location:'/',
-            route:'/'
+            route:'/',
+            name:'Projects'
           }
         ],
         url:'/',
@@ -55,7 +55,8 @@ module.exports = {
         location:[
           {
             location:'/about',
-            route:'/'
+            route:'/',
+            name:'Team'
           }
         ],
         url:'/',
@@ -66,7 +67,8 @@ module.exports = {
         location:[
           {
             location:'/',
-            route:'/'
+            route:'/',
+            name:'Contact'
           }
         ],
         url:'/',
