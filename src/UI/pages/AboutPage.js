@@ -1,21 +1,22 @@
 
-import {
-  nav,
-  preloader,
-  header,
-  about,
-  services,
-  projects,
-  team,
-  testimonial,
-  contact,
-  map,
-  footer
-} from '../data/data'
+
+// import {
+//   nav,
+//   preloader,
+//   header,
+//   about,
+//   services,
+//   projects,
+//   team,
+//   testimonial,
+//   contact,
+//   map,
+//   footer
+// } from '../data/data'
 
 
-import Nav from '../components/Nav'
-import PreLoader from '../components/PreLoader'
+// import Nav from '../components/Nav'
+// import PreLoader from '../components/PreLoader'
 import Header from '../components/Header'
 import About from '../components/About'
 import Service from '../components/Service'
@@ -28,23 +29,21 @@ import Footer from '../components/Footer'
 
 
 
-const HomePage = () => {
+const AboutPage = () => {
 
   return (
     <>
-      <Nav visibility={nav.visibility} />
-      <PreLoader visibility={preloader.visibility} />
-      <Header visibility={header.visibility} />
-      <About visibility={about.visibility} />
-      <Service visibility={services.visibility} />
-      <Project visibility={projects.visibility} />
-      <Team visibility={team.visibility} />
-      <Testimonial visibility={testimonial.visibility} />
-      <Contact visibility={contact.visibility} />
-      <Map visibility={map.visibility} />
-      <Footer visibility={footer.visibility} />
+      <Header visibility={true} />
+      <About visibility={true} />
+      <Service visibility={true} />
+      <Project visibility={true} />
+      <Team visibility={true} />
+      <Testimonial visibility={true} />
+      <Contact visibility={true} />
+      <Map visibility={true} />
+      <Footer visibility={true} />
     </>
   )
 }
 
-export default HomePage
+export default AboutPage

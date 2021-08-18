@@ -1,11 +1,11 @@
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import { testimonial } from '../data/data'
 
 
 
 
 
-import shape from "../assets/images/testimonial/shape.png"
+// import shape from "../assets/images/testimonial/shape.png"
 import t1 from "../assets/images/testimonial/t-1.jpg"
 import t2 from "../assets/images/testimonial/t-2.jpg"
 import t3 from "../assets/images/testimonial/t-3.jpg"

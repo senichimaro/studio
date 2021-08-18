@@ -1,21 +1,9 @@
-
-import {
-  nav,
-  preloader,
-  header,
-  about,
-  services,
-  projects,
-  team,
-  testimonial,
-  contact,
-  map,
-  footer
-} from '../data/data'
+// import { useRouteMatch } from 'react-router-dom'
+// import { useState, useEffect } from 'react'
 
 
-import Nav from '../components/Nav'
-import PreLoader from '../components/PreLoader'
+// import Nav from '../components/Nav'
+// import PreLoader from '../components/PreLoader'
 import Header from '../components/Header'
 import About from '../components/About'
 import Service from '../components/Service'
@@ -32,8 +20,6 @@ const HomePage = () => {
 
   return (
     <>
-      <Nav visibility={nav.visibility} />
-      <PreLoader visibility={preloader.visibility} />
       <Header visibility={false} />
       <About visibility={true} />
       <Project visibility={true} />

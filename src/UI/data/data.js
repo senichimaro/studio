@@ -6,74 +6,61 @@ module.exports = {
       {
         location:[
           {
-            location:'/',
+            isPage:'/',
+            route:'/',
+            name:'Home'
+          },
+          {
+            isPage:'/about',
             route:'/',
             name:'Home'
           }
-        ],
-        url:'/',
-        hash:'#home',
-        name:'Home'
+        ]
       },
       {
         location:[
           {
-            location:'/',
-            route:'/',
+            isPage:'/',
+            route:'/about',
             name:'About'
           }
-        ],
-        url:'/',
-        hash:'/about',
-        name:'About'
+        ]
       },
       {
         location:[
           {
-            location:'/',
-            route:'/',
+            isPage:'/',
+            route:'#service',
             name:'Services'
           }
-        ],
-        url:'/',
-        hash:'#service',
-        name:'Services'
+        ]
       },
       {
         location:[
           {
-            location:'/',
-            route:'/',
+            isPage:'/',
+            route:'#project',
             name:'Projects'
           }
-        ],
-        url:'/',
-        hash:'#project',
-        name:'Projects'
+        ]
       },
       {
         location:[
           {
-            location:'/about',
-            route:'/',
+            isPage:'/about',
+            route:'/team',
             name:'Team'
           }
-        ],
-        url:'/',
-        hash:'#team',
-        name:'Team'
+        ]
       },
       {
         location:[
           {
-            location:'/',
-            route:'/',
+            isPage:'/',
+            route:'#contact',
             name:'Contact'
           }
-        ],
-        url:'/',
-        hash:'#contact',
-        name:'Contact'
+        ]
       }
     ]
   },

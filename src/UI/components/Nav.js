@@ -6,34 +6,72 @@ import {
 import { nav } from '../data/data'
 
 
-import logo from "../assets/images/logo.png"
+// import logo from "../assets/images/logo.png"
 
 
-const Nav = ({visibility}) => {
+const Nav = ({ visibility }) => {
+
   const [ isRoutes, setIsRoutes ] = useState([])
+  const [ isPath, setIsPath ] = useState('')
 
   const { path } = useRouteMatch();
-  console.log("path",path);
+  // console.log("Nav path",path);
 
 
-  useEffect(() => {
-    const handleRoutes = async () => {
-      let routes = []
-      const rawRoutes = nav.routes.map( item => mapItems( item ) )
-      function mapItems( item ){
-        if ( Array.isArray( item.location )  ){
-          item.location.map( child => { return childItems( child ) } )
-          function childItems( child ){
-            if ( child.location === path ){ item.location = child; routes.push( item ) }
+  const loadRoutes = async ( nav , path ) => {
+    // console.log( "loadRoutes nav" , nav );
+    console.log( "loadRoutes nav.routes" , nav.routes );
+
+    let routes = []
+    const rawRoutes = nav.routes.map( item => mapItems( item ) )
+    function mapItems( item ){
+      console.log( "item" , item );
+      console.log( "item.location" , item.location );
+      if ( Array.isArray( item.location )  ){
+        item.location.map( child => { return childItems( child ) } )
+        function childItems( child ){
+          console.log( "child.isPage" , child.isPage );
+          if ( child.isPage === path ){
+            console.log( "child" , child );
+            routes.push( item )
+            // item.location = child
+            // console.log( "item" , item );
+            // routes.push( item )
           }
         }
       }
-      setIsRoutes( routes )
+      else {
+        console.log( "else item.location" , item.location );
+        console.log( "item.location.isPage === path" , item.location.isPage === path );
+        console.log( "else" , path );
+        console.log( "item.location.isPage" , item.location.isPage );
+        if ( item.location.isPage === path ){
+          // item.location = child
+          console.log( "item" , item );
+          routes.push( item )
+        }
+      }
     }
-    handleRoutes()
+    console.log( "loadRoutes routes" , routes );
+    setIsRoutes( routes )
+  }
+
+  useEffect(() => {
+
+    loadRoutes( nav , path )
+
+
   },[])
 
-  if ( visibility ){
+  function _handleClick( event ){
+    // console.log( "_handleClick event", event.target );
+    const url = event.target.getAttribute( 'href' )
+    console.log( "_handleClick url", url );
+    loadRoutes( nav , url )
+  }
+
+  if ( true ){
+    // console.log( "isRoutes", isRoutes );
     return (
 
       <div className="navigation-bar">
@@ -55,15 +93,15 @@ const Nav = ({visibility}) => {
                               <ul id="nav" className="navbar-nav ml-auto">
 
                                 {
-                                  isRoutes.map(({hash, name}) => (
-                                    <NavItems hash={hash} name={name} key={hash} />
+                                  isRoutes.map(({location}) => (
+                                    <NavItems _handleClick={_handleClick} location={location[0]} key={location[0].name} />
                                   ))
                                 }
 
                               </ul>
                           </div>
                           <div className="navbar-btn ml-20 d-none d-sm-block">
-                              <Link className="main-btn" to="#"><i className="lni-phone"></i> {nav.phone}</Link>
+                              {/* <Link className="main-btn" to="#"><i className="lni-phone"></i> {nav.phone}</Link> */}
                           </div>
                       </nav>
 
@@ -82,10 +120,11 @@ const Nav = ({visibility}) => {
 
 
 
-function NavItems({hash, name}){
+function NavItems({location, _handleClick}){
+  console.log("location Element", location);
   return (
-    <li className="nav-item" key={name}>
-      <Link className={name === 'Home' ? "page-scroll active" : "page-scroll"} to={hash}>{name}</Link>
+    <li className="nav-item">
+      <Link onClick={_handleClick} className={location.name === 'Home' ? "page-scroll active" : "page-scroll"} to={location.route}>{location.name}</Link>
     </li>
   )
 }

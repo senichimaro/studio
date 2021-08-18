@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { footer } from '../data/data'
 
 
-import logo from '../assets/images/logo.png'
+// import logo from '../assets/images/logo.png'
 
 
 const Footer = ({visibility}) => {
