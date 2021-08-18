@@ -34,15 +34,15 @@ const HomePage = () => {
     <>
       <Nav visibility={nav.visibility} />
       <PreLoader visibility={preloader.visibility} />
-      <Header visibility={false} />
-      <About visibility={true} />
-      <Project visibility={true} />
-      <Service visibility={true} />
-      <Team visibility={true} />
-      <Testimonial visibility={false} />
-      <Contact visibility={false} />
-      <Map visibility={false} />
-      <Footer visibility={true} />
+      <Header visibility={header.visibility} />
+      <About visibility={about.visibility} />
+      <Service visibility={services.visibility} />
+      <Project visibility={projects.visibility} />
+      <Team visibility={team.visibility} />
+      <Testimonial visibility={testimonial.visibility} />
+      <Contact visibility={contact.visibility} />
+      <Map visibility={map.visibility} />
+      <Footer visibility={footer.visibility} />
     </>
   )
 }

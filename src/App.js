@@ -10,12 +10,16 @@ import HomePage from './UI/pages/HomePage'
 
 
 function App() {
-  
+
   return (
     <Router>
       <Switch>
 
         <Route exact path="/">
+          <HomePage />
+        </Route>
+
+        <Route exact path="/about">
           <HomePage />
         </Route>
 

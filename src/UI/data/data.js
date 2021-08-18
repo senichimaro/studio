@@ -4,31 +4,71 @@ module.exports = {
     phone:"+98 222 4444",
     routes:[
       {
+        location:[
+          {
+            location:'/',
+            route:'/'
+          },
+          {
+            location:'/about',
+            route:'/'
+          }
+        ],
         url:'/',
         hash:'#home',
         name:'Home'
       },
       {
+        location:[
+          {
+            location:'/',
+            route:'/'
+          }
+        ],
         url:'/',
-        hash:'#about',
+        hash:'/about',
         name:'About'
       },
       {
+        location:[
+          {
+            location:'/',
+            route:'/'
+          }
+        ],
         url:'/',
         hash:'#service',
         name:'Services'
       },
       {
+        location:[
+          {
+            location:'/',
+            route:'/'
+          }
+        ],
         url:'/',
         hash:'#project',
         name:'Projects'
       },
       {
+        location:[
+          {
+            location:'/about',
+            route:'/'
+          }
+        ],
         url:'/',
         hash:'#team',
         name:'Team'
       },
       {
+        location:[
+          {
+            location:'/',
+            route:'/'
+          }
+        ],
         url:'/',
         hash:'#contact',
         name:'Contact'
@@ -48,7 +88,7 @@ module.exports = {
     }
   },
   about:{
-    visibility:true,
+    visibility:false,
     cta:'<span>27</span> Years Experience',
     h4:'About Us',
     h3:'Reasons to choose',
@@ -59,7 +99,7 @@ module.exports = {
     }
   },
   services:{
-    visibility:true,
+    visibility:false,
     h5:'Our Services',
     h2:'What We Do?',
     cards:[
@@ -144,7 +184,7 @@ module.exports = {
     ]
   },
   team:{
-    visibility: true,
+    visibility: false,
     h5:'Meet The Team',
     h2:'Our Expert Designers',
     cards:[
@@ -260,7 +300,7 @@ module.exports = {
     visibility:true
   },
   map:{
-    visibility:true
+    visibility:false
   },
   footer:{
     visibility:true,
