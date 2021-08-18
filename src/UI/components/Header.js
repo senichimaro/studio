@@ -1,4 +1,4 @@
-import { header } from '../data/data'
+// import { header } from '../data/data'
 import { Link } from 'react-router-dom'
 
 
@@ -11,7 +11,7 @@ import backgroundImage from '../assets/images/banner/banner-image.png'
 
 
 
-const Header = ({visibility}) => {
+const Header = ({visibility, header}) => {
 
   if ( visibility ){
     return (

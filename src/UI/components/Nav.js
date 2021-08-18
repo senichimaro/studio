@@ -6,72 +6,33 @@ import {
 import { nav } from '../data/data'
 
 
-// import logo from "../assets/images/logo.png"
-
-
 const Nav = ({ visibility }) => {
 
+  /** # Serve routes dynamicly
+   * depend of their availability on  current path
+  */
   const [ isRoutes, setIsRoutes ] = useState([])
-  const [ isPath, setIsPath ] = useState('')
-
-  const { path } = useRouteMatch();
-  // console.log("Nav path",path);
-
-
+  const { path } = useRouteMatch()
   const loadRoutes = async ( nav , path ) => {
-    // console.log( "loadRoutes nav" , nav );
-    console.log( "loadRoutes nav.routes" , nav.routes );
-
     let routes = []
-    const rawRoutes = nav.routes.map( item => mapItems( item ) )
-    function mapItems( item ){
-      console.log( "item" , item );
-      console.log( "item.location" , item.location );
-      if ( Array.isArray( item.location )  ){
-        item.location.map( child => { return childItems( child ) } )
-        function childItems( child ){
-          console.log( "child.isPage" , child.isPage );
-          if ( child.isPage === path ){
-            console.log( "child" , child );
-            routes.push( item )
-            // item.location = child
-            // console.log( "item" , item );
-            // routes.push( item )
-          }
-        }
-      }
-      else {
-        console.log( "else item.location" , item.location );
-        console.log( "item.location.isPage === path" , item.location.isPage === path );
-        console.log( "else" , path );
-        console.log( "item.location.isPage" , item.location.isPage );
-        if ( item.location.isPage === path ){
-          // item.location = child
-          console.log( "item" , item );
-          routes.push( item )
-        }
-      }
-    }
-    console.log( "loadRoutes routes" , routes );
-    setIsRoutes( routes )
+    const rawRoutes = nav.routes.map( item =>
+      item.location.map( ( child , key ) => {
+        if ( child.isPage === path ) routes.push( {...item, location: item.location[key]} )
+      })
+     )
+     setIsRoutes( routes )
   }
 
   useEffect(() => {
-
     loadRoutes( nav , path )
-
-
   },[])
 
   function _handleClick( event ){
-    // console.log( "_handleClick event", event.target );
     const url = event.target.getAttribute( 'href' )
-    console.log( "_handleClick url", url );
     loadRoutes( nav , url )
   }
 
-  if ( true ){
-    // console.log( "isRoutes", isRoutes );
+  if ( visibility ){
     return (
 
       <div className="navigation-bar">
@@ -94,14 +55,14 @@ const Nav = ({ visibility }) => {
 
                                 {
                                   isRoutes.map(({location}) => (
-                                    <NavItems _handleClick={_handleClick} location={location[0]} key={location[0].name} />
+                                    <NavItems _handleClick={_handleClick} location={location} key={location.name} />
                                   ))
                                 }
 
                               </ul>
                           </div>
                           <div className="navbar-btn ml-20 d-none d-sm-block">
-                              {/* <Link className="main-btn" to="#"><i className="lni-phone"></i> {nav.phone}</Link> */}
+                              <Link className="main-btn" to="#"><i className="lni-phone"></i> {nav.phone}</Link>
                           </div>
                       </nav>
 
@@ -121,7 +82,6 @@ const Nav = ({ visibility }) => {
 
 
 function NavItems({location, _handleClick}){
-  console.log("location Element", location);
   return (
     <li className="nav-item">
       <Link onClick={_handleClick} className={location.name === 'Home' ? "page-scroll active" : "page-scroll"} to={location.route}>{location.name}</Link>

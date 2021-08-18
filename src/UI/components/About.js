@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { about } from '../data/data'
+// import { about } from '../data/data'
 
 
 
@@ -7,7 +7,7 @@ import about1 from "../assets/images/about/about-1.png"
 import about2 from "../assets/images/about/about-2.png"
 
 
-const About = ({visibility}) => {
+const About = ({visibility, about }) => {
 
   if ( visibility ){
     return (

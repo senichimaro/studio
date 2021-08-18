@@ -1,17 +1,10 @@
-// import { useRouteMatch } from 'react-router-dom'
-// import { useState, useEffect } from 'react'
+
+import { home } from '../data/data'
 
 
-// import Nav from '../components/Nav'
-// import PreLoader from '../components/PreLoader'
-import Header from '../components/Header'
 import About from '../components/About'
 import Service from '../components/Service'
-import Project from '../components/Project'
 import Team from '../components/Team'
-import Testimonial from '../components/Testimonial'
-import Contact from '../components/Contact'
-import Map from '../components/Map'
 import Footer from '../components/Footer'
 
 
@@ -20,15 +13,10 @@ const HomePage = () => {
 
   return (
     <>
-      <Header visibility={false} />
-      <About visibility={true} />
-      <Project visibility={true} />
-      <Service visibility={true} />
-      <Team visibility={true} />
-      <Testimonial visibility={false} />
-      <Contact visibility={false} />
-      <Map visibility={false} />
-      <Footer visibility={true} />
+      <About visibility={true} about={home.about}/>
+      <Service visibility={true} services={home.services}/>
+      <Team visibility={true} team={home.team}/>
+      <Footer visibility={true} footer={home.footer}/>
     </>
   )
 }

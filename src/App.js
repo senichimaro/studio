@@ -1,4 +1,4 @@
-
+import React from 'react'
 
 import {
   BrowserRouter as Router,
@@ -6,13 +6,14 @@ import {
   Route
 } from 'react-router-dom'
 
-// import { nav } from './UI/data/data'
+// import { appendScript } from './UI/utils/ScriptToAppend'
 
+import Nav from './UI/components/Nav'
 
 import HomePage from './UI/pages/HomePage'
 import AboutPage from './UI/pages/AboutPage'
-import Nav from './UI/components/Nav'
-
+import PortfolioPage from './UI/pages/PortfolioPage'
+import ContactPage from './UI/pages/ContactPage'
 
 
 function App() {
@@ -29,6 +30,16 @@ function App() {
         <Route exact path="/about">
           <Nav visibility={true} />
           <AboutPage />
+        </Route>
+
+        <Route exact path="/portfolio">
+          <Nav visibility={true} />
+          <PortfolioPage />
+        </Route>
+
+        <Route exact path="/contact">
+          <Nav visibility={true} />
+          <ContactPage />
         </Route>
 
       </Switch>

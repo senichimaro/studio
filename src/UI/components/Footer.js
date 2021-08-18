@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { footer } from '../data/data'
+// import { footer } from '../data/data'
 
 
 // import logo from '../assets/images/logo.png'
 
 
-const Footer = ({visibility}) => {
+const Footer = ({visibility, footer}) => {
   const [isEmail, setIsEmail] = useState({
     email:''
   })
