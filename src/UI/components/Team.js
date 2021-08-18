@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { team } from '../data/data'
+// import { team } from '../data/data'
 
 
 import image1 from "../assets/images/team/team-1.jpg"
@@ -10,7 +10,7 @@ import image4 from "../assets/images/team/team-4.jpg"
 
 
 
-const Team = ({visibility}) => {
+const Team = ({visibility, team}) => {
 
   const images = {
     image1: image1,
@@ -56,7 +56,7 @@ const Team = ({visibility}) => {
 function CardsItem({delay, image, link, subtitle, social}){
   return (
     <div className="col-lg-3 col-md-6 col-sm-6">
-        <div className="single-team text-center mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay={delay}>
+        <div className="single-team text-center mt-30 wow fadeIn----Up" data-wow-duration="1.5s" data-wow-delay={delay}>
 
             <div className="team-image">
                 <img src={image} alt="Team" />

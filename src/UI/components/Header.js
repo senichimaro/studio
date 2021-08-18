@@ -1,17 +1,17 @@
-import { header } from '../data/data'
+// import { header } from '../data/data'
 import { Link } from 'react-router-dom'
 
 
 
 import backgroundImage from '../assets/images/banner/banner-image.png'
-import shape1 from "../assets/images/banner/shape/shape-1.png"
-import shape2 from "../assets/images/banner/shape/shape-2.png"
-import shape3 from "../assets/images/banner/shape/shape-3.png"
-import shape4 from "../assets/images/banner/shape/shape-4.png"
+// import shape1 from "../assets/images/banner/shape/shape-1.png"
+// import shape2 from "../assets/images/banner/shape/shape-2.png"
+// import shape3 from "../assets/images/banner/shape/shape-3.png"
+// import shape4 from "../assets/images/banner/shape/shape-4.png"
 
 
 
-const Header = ({visibility}) => {
+const Header = ({visibility, header}) => {
 
   if ( visibility ){
     return (

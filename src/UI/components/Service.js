@@ -1,10 +1,10 @@
-import { services } from '../data/data'
+// import { services } from '../data/data'
 
 
 
 
 
-const Service = ({visibility}) => {
+const Service = ({visibility, services}) => {
 
   if ( visibility ){
     return (
@@ -43,7 +43,7 @@ const Service = ({visibility}) => {
 function CardElement({icon, title, para, delay}){
   return (
     <div className="col-lg-4 col-md-6 col-sm-8">
-        <div className="single-services text-center mt-30 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay={delay}>
+        <div className="single-services text-center mt-30 wow fadeIn----Up" data-wow-duration="1.5s" data-wow-delay={delay}>
             <div className="services-icon">
                 <i className={icon}></i>
             </div>

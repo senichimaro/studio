@@ -3,156 +3,965 @@ module.exports = {
     visibility:true,
     phone:"+98 222 4444",
     routes:[
+      /** Set where links should be present
+       * into location string of locations
+      */
+
       {
-        url:'/',
-        hash:'#home',
-        name:'Home'
+        location:[
+          // Home
+          {
+            isPage:'/about',
+            route:'/',
+            name:'Home'
+          },
+          {
+            isPage:'/portfolio',
+            route:'/',
+            name:'Home'
+          },
+          {
+            isPage:'/contact',
+            route:'/',
+            name:'Home'
+          }
+        ]
       },
       {
-        url:'/',
-        hash:'#about',
-        name:'About'
+        location:[
+          // About
+          {
+            isPage:'/',
+            route:'/about',
+            name:'About'
+          },
+          {
+            isPage:'/portfolio',
+            route:'/about',
+            name:'About'
+          },
+          {
+            isPage:'/contact',
+            route:'/about',
+            name:'About'
+          }
+        ]
       },
       {
-        url:'/',
-        hash:'#service',
-        name:'Services'
+        location:[
+          // {
+          //   isPage:'/',
+          //   route:'#service',
+          //   name:'Services'
+          // }
+        ]
       },
       {
-        url:'/',
-        hash:'#project',
-        name:'Projects'
+        location:[
+          // {
+          //   isPage:'/',
+          //   route:'#project',
+          //   name:'Projects'
+          // }
+        ]
       },
       {
-        url:'/',
-        hash:'#team',
-        name:'Team'
+        location:[
+          // Portfolio
+          {
+            isPage:'/',
+            route:'/portfolio',
+            name:'Portfolio'
+          },
+          {
+            isPage:'/about',
+            route:'/portfolio',
+            name:'Portfolio'
+          },
+          {
+            isPage:'/contact',
+            route:'/portfolio',
+            name:'Portfolio'
+          }
+        ]
       },
       {
-        url:'/',
-        hash:'#contact',
-        name:'Contact'
+        location:[
+          // Contact
+          {
+            isPage:'/',
+            route:'/contact',
+            name:'Contact'
+          },
+          {
+            isPage:'/about',
+            route:'/contact',
+            name:'Contact'
+          },
+          {
+            isPage:'/portfolio',
+            route:'/contact',
+            name:'Contact'
+          }
+        ]
       }
     ]
   },
-  preloader:{
-    visibility:true,
-  },
-  header:{
-    visibility:true,
-    h4:"Your trusted",
-    h1:"<span>Interior</span> Design Partner for Home or Office",
-    link:{
-      hash:'#contact',
-      text:'Get a Free Quote'
+  home:{
+    preloader:{
+      visibility:true,
+    },
+    header:{
+      visibility:true,
+      h4:"Your trusted",
+      h1:"<span>Interior</span> Design Partner for Home or Office",
+      link:{
+        hash:'#contact',
+        text:'Get a Free Quote'
+      }
+    },
+    about:{
+      visibility:false,
+      cta:'<span>27</span> Years Experience',
+      h4:'About Us',
+      h3:'Reasons to choose',
+      para:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages <br /> <br />It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      link:{
+        hash:'#',
+        text:'learn more'
+      }
+    },
+    services:{
+      visibility:false,
+      h5:'Our Services',
+      h2:'What We Do?',
+      cards:[
+        {
+          icon:"lni-paint-roller",
+          title:'Interior Design',
+          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          delay:'0.4s'
+        },
+        {
+          icon:"lni-blackboard",
+          title:'Design Consultancy',
+          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          delay:'0.8s'
+        },
+        {
+          icon:"lni-home",
+          title:'Residential Design',
+          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          delay:'1.2s'
+        },
+        {
+          icon:"lni-briefcase",
+          title:'Commercial Design',
+          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          delay:'0.4s'
+        },
+        {
+          icon:"lni-handshake",
+          title:'Hospitality Design',
+          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          delay:'0.8s'
+        },
+        {
+          icon:"lni-grow",
+          title:'Co-working Space Design',
+          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          delay:'1.2s'
+        }
+      ]
+    },
+    projects:{
+      visibility:true,
+      h5:'Featured Works',
+      h2:'Projects You May Love',
+      cards:[
+        {
+          image:'image1',
+          hash:'#',
+          link:'Home Interior Design'
+        },
+        {
+          image:'image2',
+          hash:'#',
+          link:'Home Interior Design'
+        },
+        {
+          image:'image3',
+          hash:'#',
+          link:'Home Interior Design'
+        },
+        {
+          image:'image4',
+          hash:'#',
+          link:'Home Interior Design'
+        },
+        {
+          image:'image5',
+          hash:'#',
+          link:'Home Interior Design'
+        },
+        {
+          image:'image4',
+          hash:'#',
+          link:'Home Interior Design'
+        },
+        {
+          image:'image2',
+          hash:'#',
+          link:'Home Interior Design'
+        }
+      ]
+    },
+    team:{
+      visibility: false,
+      h5:'Meet The Team',
+      h2:'Our Expert Designers',
+      cards:[
+        {
+          delay:'0.4s',
+          image:'image1',
+          link:'Rob Hope',
+          subtitle:'CEO & Founder',
+          social:[
+            {
+              hash:'#',
+              icon:'lni-facebook-filled'
+            },
+            {
+              hash:'#',
+              icon:'lni-twitter-original'
+            },
+            {
+              hash:'#',
+              icon:'lni-linkedin-original'
+            }
+          ]
+        },
+        {
+          delay:'0.8s',
+          image:'image2',
+          link:'Patric Green',
+          subtitle:'Chief Designer',
+          social:[
+            {
+              hash:'#',
+              icon:'lni-facebook-filled'
+            },
+            {
+              hash:'#',
+              icon:'lni-twitter-original'
+            },
+            {
+              hash:'#',
+              icon:'lni-linkedin-original'
+            }
+          ]
+        },
+        {
+          delay:'1.2s',
+          image:'image3',
+          link:'Daryl Dixon',
+          subtitle:'Consultant',
+          social:[
+            {
+              hash:'#',
+              icon:'lni-facebook-filled'
+            },
+            {
+              hash:'#',
+              icon:'lni-twitter-original'
+            },
+            {
+              hash:'#',
+              icon:'lni-linkedin-original'
+            }
+          ]
+        },
+        {
+          delay:'1.6s',
+          image:'image4',
+          link:'Mark Parker',
+          subtitle:'Intern',
+          social:[
+            {
+              hash:'#',
+              icon:'lni-facebook-filled'
+            },
+            {
+              hash:'#',
+              icon:'lni-twitter-original'
+            },
+            {
+              hash:'#',
+              icon:'lni-linkedin-original'
+            }
+          ]
+        }
+      ]
+    },
+    testimonial:{
+      visibility:true,
+      cards:[
+        {
+          image:'t1',
+          icon:'lni-quotation',
+          para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
+          h5:'Fajar',
+          subtitle:'Random Customer'
+        },
+        {
+          image:'t2',
+          icon:'lni-quotation',
+          para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
+          h5:'Alina',
+          subtitle:'Tesla Motors'
+        },
+        {
+          image:'t3',
+          icon:'lni-quotation',
+          para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
+          h5:'Celina',
+          subtitle:'CEO, Alo'
+        }
+      ]
+    },
+    contact:{
+      visibility:true
+    },
+    map:{
+      visibility:false
+    },
+    footer:{
+      visibility:true,
+      cardsLeft:{
+        info:[
+          {
+            icon:'lni-phone-handset',
+            content:'+1880 123 456 789'
+          },
+          {
+            icon:'lni-envelope',
+            content:'contact@yourmail.com'
+          },
+          {
+            icon:'lni-map',
+            content:'1234 Avenue New York, US'
+          }
+        ],
+        social:[
+          {
+            hash:'#',
+            icon:'lni-facebook-filled'
+          },
+          {
+            hash:'#',
+            icon:'lni-twitter-original'
+          },
+          {
+            hash:'#',
+            icon:'lni-google'
+          },
+          {
+            hash:'#',
+            icon:'lni-instagram'
+          }
+        ]
+      },
+      cardsCenterLeft:{
+        title:'Essential Links',
+        links:[
+          {
+            hash:'#',
+            name:'About'
+          },
+          {
+            hash:'#',
+            name:'Projects'
+          },
+          {
+            hash:'#',
+            name:'Support'
+          }
+        ]
+      },
+      cardsCenterRight:{
+        title:'Services',
+        links:[
+          {
+            hash:'#',
+            name:'Product Design'
+          },
+          {
+            hash:'#',
+            name:'Research'
+          },
+          {
+            hash:'#',
+            name:'Office Management'
+          }
+        ]
+      },
+      cardRight:{
+        title:'Newsleter',
+        para:'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.',
+        formIcon:'lni-angle-double-right'
+      }
     }
   },
   about:{
-    visibility:true,
-    cta:'<span>27</span> Years Experience',
-    h4:'About Us',
-    h3:'Reasons to choose',
-    para:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages <br /> <br />It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    link:{
-      hash:'#',
-      text:'learn more'
+    preloader:{
+      visibility:true,
+    },
+    header:{
+      visibility:true,
+      h4:"Your trusted",
+      h1:"<span>Interior</span> Design Partner for Home or Office",
+      link:{
+        hash:'#contact',
+        text:'Get a Free Quote'
+      }
+    },
+    about:{
+      visibility:false,
+      cta:'<span>27</span> Years Experience',
+      h4:'About Us',
+      h3:'Reasons to choose',
+      para:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages <br /> <br />It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      link:{
+        hash:'#',
+        text:'learn more'
+      }
+    },
+    services:{
+      visibility:false,
+      h5:'Our Services',
+      h2:'What We Do?',
+      cards:[
+        {
+          icon:"lni-paint-roller",
+          title:'Interior Design',
+          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          delay:'0.4s'
+        },
+        {
+          icon:"lni-blackboard",
+          title:'Design Consultancy',
+          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          delay:'0.8s'
+        },
+        {
+          icon:"lni-home",
+          title:'Residential Design',
+          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          delay:'1.2s'
+        },
+        {
+          icon:"lni-briefcase",
+          title:'Commercial Design',
+          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          delay:'0.4s'
+        },
+        {
+          icon:"lni-handshake",
+          title:'Hospitality Design',
+          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          delay:'0.8s'
+        },
+        {
+          icon:"lni-grow",
+          title:'Co-working Space Design',
+          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          delay:'1.2s'
+        }
+      ]
+    },
+    projects:{
+      visibility:true,
+      h5:'Featured Works',
+      h2:'Projects You May Love',
+      cards:[
+        {
+          image:'image1',
+          hash:'#',
+          link:'Home Interior Design'
+        },
+        {
+          image:'image2',
+          hash:'#',
+          link:'Home Interior Design'
+        },
+        {
+          image:'image3',
+          hash:'#',
+          link:'Home Interior Design'
+        },
+        {
+          image:'image4',
+          hash:'#',
+          link:'Home Interior Design'
+        },
+        {
+          image:'image5',
+          hash:'#',
+          link:'Home Interior Design'
+        },
+        {
+          image:'image4',
+          hash:'#',
+          link:'Home Interior Design'
+        },
+        {
+          image:'image2',
+          hash:'#',
+          link:'Home Interior Design'
+        }
+      ]
+    },
+    team:{
+      visibility: false,
+      h5:'Meet The Team',
+      h2:'Our Expert Designers',
+      cards:[
+        {
+          delay:'0.4s',
+          image:'image1',
+          link:'Rob Hope',
+          subtitle:'CEO & Founder',
+          social:[
+            {
+              hash:'#',
+              icon:'lni-facebook-filled'
+            },
+            {
+              hash:'#',
+              icon:'lni-twitter-original'
+            },
+            {
+              hash:'#',
+              icon:'lni-linkedin-original'
+            }
+          ]
+        },
+        {
+          delay:'0.8s',
+          image:'image2',
+          link:'Patric Green',
+          subtitle:'Chief Designer',
+          social:[
+            {
+              hash:'#',
+              icon:'lni-facebook-filled'
+            },
+            {
+              hash:'#',
+              icon:'lni-twitter-original'
+            },
+            {
+              hash:'#',
+              icon:'lni-linkedin-original'
+            }
+          ]
+        },
+        {
+          delay:'1.2s',
+          image:'image3',
+          link:'Daryl Dixon',
+          subtitle:'Consultant',
+          social:[
+            {
+              hash:'#',
+              icon:'lni-facebook-filled'
+            },
+            {
+              hash:'#',
+              icon:'lni-twitter-original'
+            },
+            {
+              hash:'#',
+              icon:'lni-linkedin-original'
+            }
+          ]
+        },
+        {
+          delay:'1.6s',
+          image:'image4',
+          link:'Mark Parker',
+          subtitle:'Intern',
+          social:[
+            {
+              hash:'#',
+              icon:'lni-facebook-filled'
+            },
+            {
+              hash:'#',
+              icon:'lni-twitter-original'
+            },
+            {
+              hash:'#',
+              icon:'lni-linkedin-original'
+            }
+          ]
+        }
+      ]
+    },
+    testimonial:{
+      visibility:true,
+      cards:[
+        {
+          image:'t1',
+          icon:'lni-quotation',
+          para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
+          h5:'Fajar',
+          subtitle:'Random Customer'
+        },
+        {
+          image:'t2',
+          icon:'lni-quotation',
+          para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
+          h5:'Alina',
+          subtitle:'Tesla Motors'
+        },
+        {
+          image:'t3',
+          icon:'lni-quotation',
+          para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
+          h5:'Celina',
+          subtitle:'CEO, Alo'
+        }
+      ]
+    },
+    contact:{
+      visibility:true
+    },
+    map:{
+      visibility:false
+    },
+    footer:{
+      visibility:true,
+      cardsLeft:{
+        info:[
+          {
+            icon:'lni-phone-handset',
+            content:'+1880 123 456 789'
+          },
+          {
+            icon:'lni-envelope',
+            content:'contact@yourmail.com'
+          },
+          {
+            icon:'lni-map',
+            content:'1234 Avenue New York, US'
+          }
+        ],
+        social:[
+          {
+            hash:'#',
+            icon:'lni-facebook-filled'
+          },
+          {
+            hash:'#',
+            icon:'lni-twitter-original'
+          },
+          {
+            hash:'#',
+            icon:'lni-google'
+          },
+          {
+            hash:'#',
+            icon:'lni-instagram'
+          }
+        ]
+      },
+      cardsCenterLeft:{
+        title:'Essential Links',
+        links:[
+          {
+            hash:'#',
+            name:'About'
+          },
+          {
+            hash:'#',
+            name:'Projects'
+          },
+          {
+            hash:'#',
+            name:'Support'
+          }
+        ]
+      },
+      cardsCenterRight:{
+        title:'Services',
+        links:[
+          {
+            hash:'#',
+            name:'Product Design'
+          },
+          {
+            hash:'#',
+            name:'Research'
+          },
+          {
+            hash:'#',
+            name:'Office Management'
+          }
+        ]
+      },
+      cardRight:{
+        title:'Newsleter',
+        para:'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.',
+        formIcon:'lni-angle-double-right'
+      }
     }
   },
-  services:{
-    visibility:true,
-    h5:'Our Services',
-    h2:'What We Do?',
-    cards:[
-      {
-        icon:"lni-paint-roller",
-        title:'Interior Design',
-        para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-        delay:'0.4s'
-      },
-      {
-        icon:"lni-blackboard",
-        title:'Design Consultancy',
-        para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-        delay:'0.8s'
-      },
-      {
-        icon:"lni-home",
-        title:'Residential Design',
-        para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-        delay:'1.2s'
-      },
-      {
-        icon:"lni-briefcase",
-        title:'Commercial Design',
-        para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-        delay:'0.4s'
-      },
-      {
-        icon:"lni-handshake",
-        title:'Hospitality Design',
-        para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-        delay:'0.8s'
-      },
-      {
-        icon:"lni-grow",
-        title:'Co-working Space Design',
-        para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-        delay:'1.2s'
+  portfolio:{
+    preloader:{
+      visibility:true,
+    },
+    header:{
+      visibility:true,
+      h4:"Your trusted",
+      h1:"<span>Interior</span> Design Partner for Home or Office",
+      link:{
+        hash:'#contact',
+        text:'Get a Free Quote'
       }
-    ]
-  },
-  projects:{
-    visibility:true,
-    h5:'Featured Works',
-    h2:'Projects You May Love',
-    cards:[
-      {
-        image:'image1',
+    },
+    about:{
+      visibility:false,
+      cta:'<span>27</span> Years Experience',
+      h4:'About Us',
+      h3:'Reasons to choose',
+      para:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages <br /> <br />It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      link:{
         hash:'#',
-        link:'Home Interior Design'
-      },
-      {
-        image:'image2',
-        hash:'#',
-        link:'Home Interior Design'
-      },
-      {
-        image:'image3',
-        hash:'#',
-        link:'Home Interior Design'
-      },
-      {
-        image:'image4',
-        hash:'#',
-        link:'Home Interior Design'
-      },
-      {
-        image:'image5',
-        hash:'#',
-        link:'Home Interior Design'
-      },
-      {
-        image:'image4',
-        hash:'#',
-        link:'Home Interior Design'
-      },
-      {
-        image:'image2',
-        hash:'#',
-        link:'Home Interior Design'
+        text:'learn more'
       }
-    ]
-  },
-  team:{
-    visibility: true,
-    h5:'Meet The Team',
-    h2:'Our Expert Designers',
-    cards:[
-      {
-        delay:'0.4s',
-        image:'image1',
-        link:'Rob Hope',
-        subtitle:'CEO & Founder',
+    },
+    services:{
+      visibility:false,
+      h5:'Our Services',
+      h2:'What We Do?',
+      cards:[
+        {
+          icon:"lni-paint-roller",
+          title:'Interior Design',
+          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          delay:'0.4s'
+        },
+        {
+          icon:"lni-blackboard",
+          title:'Design Consultancy',
+          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          delay:'0.8s'
+        },
+        {
+          icon:"lni-home",
+          title:'Residential Design',
+          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          delay:'1.2s'
+        },
+        {
+          icon:"lni-briefcase",
+          title:'Commercial Design',
+          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          delay:'0.4s'
+        },
+        {
+          icon:"lni-handshake",
+          title:'Hospitality Design',
+          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          delay:'0.8s'
+        },
+        {
+          icon:"lni-grow",
+          title:'Co-working Space Design',
+          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          delay:'1.2s'
+        }
+      ]
+    },
+    projects:{
+      visibility:true,
+      h5:'Featured Works',
+      h2:'Projects You May Love',
+      cards:[
+        {
+          image:'image1',
+          hash:'#',
+          link:'Home Interior Design'
+        },
+        {
+          image:'image2',
+          hash:'#',
+          link:'Home Interior Design'
+        },
+        {
+          image:'image3',
+          hash:'#',
+          link:'Home Interior Design'
+        },
+        {
+          image:'image4',
+          hash:'#',
+          link:'Home Interior Design'
+        },
+        {
+          image:'image5',
+          hash:'#',
+          link:'Home Interior Design'
+        },
+        {
+          image:'image4',
+          hash:'#',
+          link:'Home Interior Design'
+        },
+        {
+          image:'image2',
+          hash:'#',
+          link:'Home Interior Design'
+        }
+      ]
+    },
+    team:{
+      visibility: false,
+      h5:'Meet The Team',
+      h2:'Our Expert Designers',
+      cards:[
+        {
+          delay:'0.4s',
+          image:'image1',
+          link:'Rob Hope',
+          subtitle:'CEO & Founder',
+          social:[
+            {
+              hash:'#',
+              icon:'lni-facebook-filled'
+            },
+            {
+              hash:'#',
+              icon:'lni-twitter-original'
+            },
+            {
+              hash:'#',
+              icon:'lni-linkedin-original'
+            }
+          ]
+        },
+        {
+          delay:'0.8s',
+          image:'image2',
+          link:'Patric Green',
+          subtitle:'Chief Designer',
+          social:[
+            {
+              hash:'#',
+              icon:'lni-facebook-filled'
+            },
+            {
+              hash:'#',
+              icon:'lni-twitter-original'
+            },
+            {
+              hash:'#',
+              icon:'lni-linkedin-original'
+            }
+          ]
+        },
+        {
+          delay:'1.2s',
+          image:'image3',
+          link:'Daryl Dixon',
+          subtitle:'Consultant',
+          social:[
+            {
+              hash:'#',
+              icon:'lni-facebook-filled'
+            },
+            {
+              hash:'#',
+              icon:'lni-twitter-original'
+            },
+            {
+              hash:'#',
+              icon:'lni-linkedin-original'
+            }
+          ]
+        },
+        {
+          delay:'1.6s',
+          image:'image4',
+          link:'Mark Parker',
+          subtitle:'Intern',
+          social:[
+            {
+              hash:'#',
+              icon:'lni-facebook-filled'
+            },
+            {
+              hash:'#',
+              icon:'lni-twitter-original'
+            },
+            {
+              hash:'#',
+              icon:'lni-linkedin-original'
+            }
+          ]
+        }
+      ]
+    },
+    testimonial:{
+      visibility:true,
+      cards:[
+        {
+          image:'t1',
+          icon:'lni-quotation',
+          para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
+          h5:'Fajar',
+          subtitle:'Random Customer'
+        },
+        {
+          image:'t2',
+          icon:'lni-quotation',
+          para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
+          h5:'Alina',
+          subtitle:'Tesla Motors'
+        },
+        {
+          image:'t3',
+          icon:'lni-quotation',
+          para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
+          h5:'Celina',
+          subtitle:'CEO, Alo'
+        }
+      ]
+    },
+    contact:{
+      visibility:true
+    },
+    map:{
+      visibility:false
+    },
+    footer:{
+      visibility:true,
+      cardsLeft:{
+        info:[
+          {
+            icon:'lni-phone-handset',
+            content:'+1880 123 456 789'
+          },
+          {
+            icon:'lni-envelope',
+            content:'contact@yourmail.com'
+          },
+          {
+            icon:'lni-map',
+            content:'1234 Avenue New York, US'
+          }
+        ],
         social:[
           {
             hash:'#',
@@ -164,178 +973,358 @@ module.exports = {
           },
           {
             hash:'#',
-            icon:'lni-linkedin-original'
+            icon:'lni-google'
+          },
+          {
+            hash:'#',
+            icon:'lni-instagram'
           }
         ]
       },
-      {
-        delay:'0.8s',
-        image:'image2',
-        link:'Patric Green',
-        subtitle:'Chief Designer',
-        social:[
+      cardsCenterLeft:{
+        title:'Essential Links',
+        links:[
           {
             hash:'#',
-            icon:'lni-facebook-filled'
+            name:'About'
           },
           {
             hash:'#',
-            icon:'lni-twitter-original'
+            name:'Projects'
           },
           {
             hash:'#',
-            icon:'lni-linkedin-original'
+            name:'Support'
           }
         ]
       },
-      {
-        delay:'1.2s',
-        image:'image3',
-        link:'Daryl Dixon',
-        subtitle:'Consultant',
-        social:[
+      cardsCenterRight:{
+        title:'Services',
+        links:[
           {
             hash:'#',
-            icon:'lni-facebook-filled'
+            name:'Product Design'
           },
           {
             hash:'#',
-            icon:'lni-twitter-original'
+            name:'Research'
           },
           {
             hash:'#',
-            icon:'lni-linkedin-original'
+            name:'Office Management'
           }
         ]
       },
-      {
-        delay:'1.6s',
-        image:'image4',
-        link:'Mark Parker',
-        subtitle:'Intern',
-        social:[
-          {
-            hash:'#',
-            icon:'lni-facebook-filled'
-          },
-          {
-            hash:'#',
-            icon:'lni-twitter-original'
-          },
-          {
-            hash:'#',
-            icon:'lni-linkedin-original'
-          }
-        ]
+      cardRight:{
+        title:'Newsleter',
+        para:'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.',
+        formIcon:'lni-angle-double-right'
       }
-    ]
-  },
-  testimonial:{
-    visibility:true,
-    cards:[
-      {
-        image:'t1',
-        icon:'lni-quotation',
-        para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
-        h5:'Fajar',
-        subtitle:'Random Customer'
-      },
-      {
-        image:'t2',
-        icon:'lni-quotation',
-        para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
-        h5:'Alina',
-        subtitle:'Tesla Motors'
-      },
-      {
-        image:'t3',
-        icon:'lni-quotation',
-        para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
-        h5:'Celina',
-        subtitle:'CEO, Alo'
-      }
-    ]
+    }
   },
   contact:{
-    visibility:true
-  },
-  map:{
-    visibility:true
-  },
-  footer:{
-    visibility:true,
-    cardsLeft:{
-      info:[
+    preloader:{
+      visibility:true,
+    },
+    header:{
+      visibility:true,
+      h4:"Your trusted",
+      h1:"<span>Interior</span> Design Partner for Home or Office",
+      link:{
+        hash:'#contact',
+        text:'Get a Free Quote'
+      }
+    },
+    about:{
+      visibility:false,
+      cta:'<span>27</span> Years Experience',
+      h4:'About Us',
+      h3:'Reasons to choose',
+      para:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages <br /> <br />It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      link:{
+        hash:'#',
+        text:'learn more'
+      }
+    },
+    services:{
+      visibility:false,
+      h5:'Our Services',
+      h2:'What We Do?',
+      cards:[
         {
-          icon:'lni-phone-handset',
-          content:'+1880 123 456 789'
+          icon:"lni-paint-roller",
+          title:'Interior Design',
+          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          delay:'0.4s'
         },
         {
-          icon:'lni-envelope',
-          content:'contact@yourmail.com'
+          icon:"lni-blackboard",
+          title:'Design Consultancy',
+          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          delay:'0.8s'
         },
         {
-          icon:'lni-map',
-          content:'1234 Avenue New York, US'
-        }
-      ],
-      social:[
-        {
-          hash:'#',
-          icon:'lni-facebook-filled'
+          icon:"lni-home",
+          title:'Residential Design',
+          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          delay:'1.2s'
         },
         {
-          hash:'#',
-          icon:'lni-twitter-original'
+          icon:"lni-briefcase",
+          title:'Commercial Design',
+          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          delay:'0.4s'
         },
         {
-          hash:'#',
-          icon:'lni-google'
+          icon:"lni-handshake",
+          title:'Hospitality Design',
+          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          delay:'0.8s'
         },
         {
-          hash:'#',
-          icon:'lni-instagram'
+          icon:"lni-grow",
+          title:'Co-working Space Design',
+          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          delay:'1.2s'
         }
       ]
     },
-    cardsCenterLeft:{
-      title:'Essential Links',
-      links:[
+    projects:{
+      visibility:true,
+      h5:'Featured Works',
+      h2:'Projects You May Love',
+      cards:[
         {
+          image:'image1',
           hash:'#',
-          name:'About'
+          link:'Home Interior Design'
         },
         {
+          image:'image2',
           hash:'#',
-          name:'Projects'
+          link:'Home Interior Design'
         },
         {
+          image:'image3',
           hash:'#',
-          name:'Support'
+          link:'Home Interior Design'
+        },
+        {
+          image:'image4',
+          hash:'#',
+          link:'Home Interior Design'
+        },
+        {
+          image:'image5',
+          hash:'#',
+          link:'Home Interior Design'
+        },
+        {
+          image:'image4',
+          hash:'#',
+          link:'Home Interior Design'
+        },
+        {
+          image:'image2',
+          hash:'#',
+          link:'Home Interior Design'
         }
       ]
     },
-    cardsCenterRight:{
-      title:'Services',
-      links:[
+    team:{
+      visibility: false,
+      h5:'Meet The Team',
+      h2:'Our Expert Designers',
+      cards:[
         {
-          hash:'#',
-          name:'Product Design'
+          delay:'0.4s',
+          image:'image1',
+          link:'Rob Hope',
+          subtitle:'CEO & Founder',
+          social:[
+            {
+              hash:'#',
+              icon:'lni-facebook-filled'
+            },
+            {
+              hash:'#',
+              icon:'lni-twitter-original'
+            },
+            {
+              hash:'#',
+              icon:'lni-linkedin-original'
+            }
+          ]
         },
         {
-          hash:'#',
-          name:'Research'
+          delay:'0.8s',
+          image:'image2',
+          link:'Patric Green',
+          subtitle:'Chief Designer',
+          social:[
+            {
+              hash:'#',
+              icon:'lni-facebook-filled'
+            },
+            {
+              hash:'#',
+              icon:'lni-twitter-original'
+            },
+            {
+              hash:'#',
+              icon:'lni-linkedin-original'
+            }
+          ]
         },
         {
-          hash:'#',
-          name:'Office Management'
+          delay:'1.2s',
+          image:'image3',
+          link:'Daryl Dixon',
+          subtitle:'Consultant',
+          social:[
+            {
+              hash:'#',
+              icon:'lni-facebook-filled'
+            },
+            {
+              hash:'#',
+              icon:'lni-twitter-original'
+            },
+            {
+              hash:'#',
+              icon:'lni-linkedin-original'
+            }
+          ]
+        },
+        {
+          delay:'1.6s',
+          image:'image4',
+          link:'Mark Parker',
+          subtitle:'Intern',
+          social:[
+            {
+              hash:'#',
+              icon:'lni-facebook-filled'
+            },
+            {
+              hash:'#',
+              icon:'lni-twitter-original'
+            },
+            {
+              hash:'#',
+              icon:'lni-linkedin-original'
+            }
+          ]
         }
       ]
     },
-    cardRight:{
-      title:'Newsleter',
-      para:'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.',
-      formIcon:'lni-angle-double-right'
+    testimonial:{
+      visibility:true,
+      cards:[
+        {
+          image:'t1',
+          icon:'lni-quotation',
+          para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
+          h5:'Fajar',
+          subtitle:'Random Customer'
+        },
+        {
+          image:'t2',
+          icon:'lni-quotation',
+          para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
+          h5:'Alina',
+          subtitle:'Tesla Motors'
+        },
+        {
+          image:'t3',
+          icon:'lni-quotation',
+          para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
+          h5:'Celina',
+          subtitle:'CEO, Alo'
+        }
+      ]
+    },
+    contact:{
+      visibility:true
+    },
+    map:{
+      visibility:false
+    },
+    footer:{
+      visibility:true,
+      cardsLeft:{
+        info:[
+          {
+            icon:'lni-phone-handset',
+            content:'+1880 123 456 789'
+          },
+          {
+            icon:'lni-envelope',
+            content:'contact@yourmail.com'
+          },
+          {
+            icon:'lni-map',
+            content:'1234 Avenue New York, US'
+          }
+        ],
+        social:[
+          {
+            hash:'#',
+            icon:'lni-facebook-filled'
+          },
+          {
+            hash:'#',
+            icon:'lni-twitter-original'
+          },
+          {
+            hash:'#',
+            icon:'lni-google'
+          },
+          {
+            hash:'#',
+            icon:'lni-instagram'
+          }
+        ]
+      },
+      cardsCenterLeft:{
+        title:'Essential Links',
+        links:[
+          {
+            hash:'#',
+            name:'About'
+          },
+          {
+            hash:'#',
+            name:'Projects'
+          },
+          {
+            hash:'#',
+            name:'Support'
+          }
+        ]
+      },
+      cardsCenterRight:{
+        title:'Services',
+        links:[
+          {
+            hash:'#',
+            name:'Product Design'
+          },
+          {
+            hash:'#',
+            name:'Research'
+          },
+          {
+            hash:'#',
+            name:'Office Management'
+          }
+        ]
+      },
+      cardRight:{
+        title:'Newsleter',
+        para:'Lorem ipsum dolor sit amet, consec tetur adipiscing elit.',
+        formIcon:'lni-angle-double-right'
+      }
     }
   }
 }

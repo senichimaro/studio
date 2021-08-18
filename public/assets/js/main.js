@@ -70,8 +70,8 @@ $(function() {
      });
 
 
-    //===== Slick project
 
+     //===== Slick project
     $('.project-active').slick({
         dots: true,
         infinite: true,

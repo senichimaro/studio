@@ -1,11 +1,36 @@
-import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import {
+  Link,
+  useRouteMatch
+} from 'react-router-dom'
 import { nav } from '../data/data'
 
 
-import logo from "../assets/images/logo.png"
+const Nav = ({ visibility }) => {
 
+  /** # Serve routes dynamicly
+   * depend of their availability on  current path
+  */
+  const [ isRoutes, setIsRoutes ] = useState([])
+  const { path } = useRouteMatch()
+  const loadRoutes = async ( nav , path ) => {
+    let routes = []
+    const rawRoutes = nav.routes.map( item =>
+      item.location.map( ( child , key ) => {
+        if ( child.isPage === path ) routes.push( {...item, location: item.location[key]} )
+      })
+     )
+     setIsRoutes( routes )
+  }
 
-const PreLoader = ({visibility}) => {
+  useEffect(() => {
+    loadRoutes( nav , path )
+  },[])
+
+  function _handleClick( event ){
+    const url = event.target.getAttribute( 'href' )
+    loadRoutes( nav , url )
+  }
 
   if ( visibility ){
     return (
@@ -29,8 +54,8 @@ const PreLoader = ({visibility}) => {
                               <ul id="nav" className="navbar-nav ml-auto">
 
                                 {
-                                  nav.routes.map(({hash, name}) => (
-                                    <NavItems hash={hash} name={name} key={hash} />
+                                  isRoutes.map(({location}) => (
+                                    <NavItems _handleClick={_handleClick} location={location} key={location.name} />
                                   ))
                                 }
 
@@ -56,14 +81,14 @@ const PreLoader = ({visibility}) => {
 
 
 
-function NavItems({hash, name}){
+function NavItems({location, _handleClick}){
   return (
-    <li className="nav-item" key={name}>
-      <Link className={name === 'Home' ? "page-scroll active" : "page-scroll"} to={hash}>{name}</Link>
+    <li className="nav-item">
+      <Link onClick={_handleClick} className={location.name === 'Home' ? "page-scroll active" : "page-scroll"} to={location.route}>{location.name}</Link>
     </li>
   )
 }
 
 
 
-export default PreLoader
+export default Nav
