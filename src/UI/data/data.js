@@ -117,7 +117,9 @@ module.exports = {
       link:{
         hash:'#',
         text:'learn more'
-      }
+      },
+      image1:'empresa',
+      image2:'bussines2'
     },
     services:{
       visibility:false,
@@ -357,28 +359,28 @@ module.exports = {
     }
   },
   about:{
-    preloader:{
-      visibility:true,
-    },
     header:{
       visibility:true,
-      h4:"Your trusted",
-      h1:"<span>Interior</span> Design Partner for Home or Office",
+      h4:"Capital Humano",
+      h1:"<span id='cborder2'>Trabajo en Equipo</span> <span id='cborder'>y satisfacción de clientes</span>",
       link:{
         hash:'#contact',
-        text:'Get a Free Quote'
-      }
+        text:'Las razones de nuestro crecimiento'
+      },
+      image:'building2'
     },
     about:{
       visibility:false,
       cta:'<span>27</span> Years Experience',
-      h4:'About Us',
-      h3:'Reasons to choose',
-      para:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages <br /> <br />It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      h4:'La Mejora Continua como Identidad',
+      h3:'Nuestra Organización',
+      para:"Ponemos especial dedicación en transmitir a nuestro equipo la política de la empresa, adquiriendo de todos ellos el compromiso por la calidad y la interrelación del trabajo con el medio ambiente. Comprometidos con la sociedad y el medio ambiente entendemos la ingeniería como un medio para perfeccionar el mundo que nos rodea con el que, a través de la imaginación y el trabajo, podremos  acercarnos a la vida con la que soñamos.<br /><br /> Nuestro equipo está representado por una treintena de personas repartidas en nuestras diversas oficinas, siendo el capital humano, la capacidad de trabajo en equipo y la satisfacción de nuestros clientes las principales razones de nuestro crecimiento. La política de recursos humanos en la prevención, la seguridad laboral y la correcta gestión de las competencias, por ello inicidimos en la formción continua, tutorizamos la adquisición de las nuevas competencias y el mantenimiento de los mejores profesionales.",
       link:{
         hash:'#',
         text:'learn more'
-      }
+      },
+      image1:'meeting',
+      image2:'woman'
     },
     services:{
       visibility:false,
@@ -387,202 +389,41 @@ module.exports = {
       cards:[
         {
           icon:"lni-paint-roller",
-          title:'Interior Design',
-          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          title:'Caminos y Puertos',
+          para:'Profesionales con una sólida base técnica para incidir en la ordenación del territorio.',
+          delay:'0.4s'
+        },
+        {
+          icon:"lni-briefcase",
+          title:'Obras Públicas',
+          para:'Dirección y ejecución de proyectos con especial énfasis en tecnología de la construcción.',
           delay:'0.4s'
         },
         {
           icon:"lni-blackboard",
-          title:'Design Consultancy',
-          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          title:'Ingenieros Industriales',
+          para:'Profesionales en el desarrollo de la industria, de las administraciones y servicios.',
           delay:'0.8s'
         },
         {
           icon:"lni-home",
-          title:'Residential Design',
-          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          title:'Ingenieros de Minas',
+          para:'Investigación, extracción, procesamiento y transformación los recursos minerales y energéticos.',
           delay:'1.2s'
         },
         {
-          icon:"lni-briefcase",
-          title:'Commercial Design',
-          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-          delay:'0.4s'
-        },
-        {
           icon:"lni-handshake",
-          title:'Hospitality Design',
-          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          title:'Arquitectos',
+          para:'Dirección y Redacción de proyectos bajo la coordinación del proyectista redactor.',
           delay:'0.8s'
         },
         {
           icon:"lni-grow",
-          title:'Co-working Space Design',
-          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
+          title:'Arquitectos Técnicos',
+          para:'Control minucioso y preciso de la construcción del edificio conforme a las buenas prácticas.',
           delay:'1.2s'
         }
       ]
-    },
-    projects:{
-      visibility:true,
-      h5:'Featured Works',
-      h2:'Projects You May Love',
-      cards:[
-        {
-          image:'image1',
-          hash:'#',
-          link:'Home Interior Design'
-        },
-        {
-          image:'image2',
-          hash:'#',
-          link:'Home Interior Design'
-        },
-        {
-          image:'image3',
-          hash:'#',
-          link:'Home Interior Design'
-        },
-        {
-          image:'image4',
-          hash:'#',
-          link:'Home Interior Design'
-        },
-        {
-          image:'image5',
-          hash:'#',
-          link:'Home Interior Design'
-        },
-        {
-          image:'image4',
-          hash:'#',
-          link:'Home Interior Design'
-        },
-        {
-          image:'image2',
-          hash:'#',
-          link:'Home Interior Design'
-        }
-      ]
-    },
-    team:{
-      visibility: false,
-      h5:'Meet The Team',
-      h2:'Our Expert Designers',
-      cards:[
-        {
-          delay:'0.4s',
-          image:'image1',
-          link:'Rob Hope',
-          subtitle:'CEO & Founder',
-          social:[
-            {
-              hash:'#',
-              icon:'lni-facebook-filled'
-            },
-            {
-              hash:'#',
-              icon:'lni-twitter-original'
-            },
-            {
-              hash:'#',
-              icon:'lni-linkedin-original'
-            }
-          ]
-        },
-        {
-          delay:'0.8s',
-          image:'image2',
-          link:'Patric Green',
-          subtitle:'Chief Designer',
-          social:[
-            {
-              hash:'#',
-              icon:'lni-facebook-filled'
-            },
-            {
-              hash:'#',
-              icon:'lni-twitter-original'
-            },
-            {
-              hash:'#',
-              icon:'lni-linkedin-original'
-            }
-          ]
-        },
-        {
-          delay:'1.2s',
-          image:'image3',
-          link:'Daryl Dixon',
-          subtitle:'Consultant',
-          social:[
-            {
-              hash:'#',
-              icon:'lni-facebook-filled'
-            },
-            {
-              hash:'#',
-              icon:'lni-twitter-original'
-            },
-            {
-              hash:'#',
-              icon:'lni-linkedin-original'
-            }
-          ]
-        },
-        {
-          delay:'1.6s',
-          image:'image4',
-          link:'Mark Parker',
-          subtitle:'Intern',
-          social:[
-            {
-              hash:'#',
-              icon:'lni-facebook-filled'
-            },
-            {
-              hash:'#',
-              icon:'lni-twitter-original'
-            },
-            {
-              hash:'#',
-              icon:'lni-linkedin-original'
-            }
-          ]
-        }
-      ]
-    },
-    testimonial:{
-      visibility:true,
-      cards:[
-        {
-          image:'t1',
-          icon:'lni-quotation',
-          para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
-          h5:'Fajar',
-          subtitle:'Random Customer'
-        },
-        {
-          image:'t2',
-          icon:'lni-quotation',
-          para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
-          h5:'Alina',
-          subtitle:'Tesla Motors'
-        },
-        {
-          image:'t3',
-          icon:'lni-quotation',
-          para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
-          h5:'Celina',
-          subtitle:'CEO, Alo'
-        }
-      ]
-    },
-    contact:{
-      visibility:true
-    },
-    map:{
-      visibility:false
     },
     footer:{
       visibility:true,
@@ -662,124 +503,23 @@ module.exports = {
     }
   },
   portfolio:{
-    preloader:{
-      visibility:true,
-    },
     header:{
       visibility:true,
-      h4:"Your trusted",
-      h1:"<span>Interior</span> Design Partner for Home or Office",
-      link:{
-        hash:'#contact',
-        text:'Get a Free Quote'
-      }
-    },
-    about:{
-      visibility:false,
-      cta:'<span>27</span> Years Experience',
-      h4:'About Us',
-      h3:'Reasons to choose',
-      para:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages <br /> <br />It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      link:{
-        hash:'#',
-        text:'learn more'
-      }
-    },
-    services:{
-      visibility:false,
-      h5:'Our Services',
-      h2:'What We Do?',
-      cards:[
-        {
-          icon:"lni-paint-roller",
-          title:'Interior Design',
-          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-          delay:'0.4s'
-        },
-        {
-          icon:"lni-blackboard",
-          title:'Design Consultancy',
-          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-          delay:'0.8s'
-        },
-        {
-          icon:"lni-home",
-          title:'Residential Design',
-          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-          delay:'1.2s'
-        },
-        {
-          icon:"lni-briefcase",
-          title:'Commercial Design',
-          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-          delay:'0.4s'
-        },
-        {
-          icon:"lni-handshake",
-          title:'Hospitality Design',
-          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-          delay:'0.8s'
-        },
-        {
-          icon:"lni-grow",
-          title:'Co-working Space Design',
-          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-          delay:'1.2s'
-        }
-      ]
-    },
-    projects:{
-      visibility:true,
-      h5:'Featured Works',
-      h2:'Projects You May Love',
-      cards:[
-        {
-          image:'image1',
-          hash:'#',
-          link:'Home Interior Design'
-        },
-        {
-          image:'image2',
-          hash:'#',
-          link:'Home Interior Design'
-        },
-        {
-          image:'image3',
-          hash:'#',
-          link:'Home Interior Design'
-        },
-        {
-          image:'image4',
-          hash:'#',
-          link:'Home Interior Design'
-        },
-        {
-          image:'image5',
-          hash:'#',
-          link:'Home Interior Design'
-        },
-        {
-          image:'image4',
-          hash:'#',
-          link:'Home Interior Design'
-        },
-        {
-          image:'image2',
-          hash:'#',
-          link:'Home Interior Design'
-        }
-      ]
+      h4:"Puente de la Constitución",
+      h1:"<span>La Cumbre</span> de la ingeniería civil española",
+      link:false,
+      image:'bridge'
     },
     team:{
       visibility: false,
-      h5:'Meet The Team',
-      h2:'Our Expert Designers',
+      h5:'Proyectos Galardonados',
+      h2:'Infraestructuras',
       cards:[
         {
           delay:'0.4s',
-          image:'image1',
-          link:'Rob Hope',
-          subtitle:'CEO & Founder',
+          image:'buildingRed',
+          link:'Torre Marichalar con mirador panorámico 360º',
+          subtitle:'Barcelona, Catalunya',
           social:[
             {
               hash:'#',
@@ -797,9 +537,9 @@ module.exports = {
         },
         {
           delay:'0.8s',
-          image:'image2',
-          link:'Patric Green',
-          subtitle:'Chief Designer',
+          image:'corp',
+          link:'Energía solar para autoconsumo industral ',
+          subtitle:'Madrid, Madrid',
           social:[
             {
               hash:'#',
@@ -817,9 +557,9 @@ module.exports = {
         },
         {
           delay:'1.2s',
-          image:'image3',
-          link:'Daryl Dixon',
-          subtitle:'Consultant',
+          image:'wind',
+          link:'Parque Eólico de 600 Megavatios',
+          subtitle:'Cullera, Valencia.',
           social:[
             {
               hash:'#',
@@ -837,8 +577,8 @@ module.exports = {
         },
         {
           delay:'1.6s',
-          image:'image4',
-          link:'Mark Parker',
+          image:'solar',
+          link:' Mayores instaladores en España, alcanzando 80 GW.',
           subtitle:'Intern',
           social:[
             {
@@ -857,37 +597,57 @@ module.exports = {
         }
       ]
     },
-    testimonial:{
-      visibility:true,
+    about:{
+      visibility:false,
+      cta:'<span>27</span> Years Experience',
+      h4:'Especialistas con tecnología avanzada',
+      h3:'Ingeniería Civil',
+      para:"Somos especialistas en la ingeniería de residuos y hemos desarrollado soluciones en este ámbito en toda la geografía nacional e internacional. Con la gestión de los residuos conseguimos un menor impacto ambiental. Hemos realizado proyectos de edificación para clientes públicos y privados con gran satisfacción para nuestros clientes. Desde viviendas, centros de exposición, hoteles y restaurantes, a edificios industriales, culturales y deportivos. Dentro del ámbito de desarrollo urbano hemos llevado a cabo urbanizaciones singulares e históricas en importantes ciudades. <br /> <br /> Destacan sobre todos los demás, los trabajos relacionados con carreteras llevando a cabo Estudios Informativos, Proyectos de Trazado y Construcción de autovías, desdoblamientos, mejoras y ensanches de carreteras convencionales, mejora de accesos y variantes de población, contando con los medios técnicos más avanzados y con un equipo multidisciplinar que abarca todos los campos relacionados con las Infraestructuras del Transporte.",
+      link:{
+        hash:'#',
+        text:'learn more'
+      },
+      image1:'beach',
+      image2:'center'
+    },
+    services:{
+      visibility:false,
+      h5:'Actividades en Cuatro Áreas',
+      h2:'Clientes',
       cards:[
         {
-          image:'t1',
-          icon:'lni-quotation',
-          para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
-          h5:'Fajar',
-          subtitle:'Random Customer'
+          icon:false,
+          image:'logo1',
+          title:'Aadministrciones Nacionales',
+          para:'',
+          delay:'0.4s',
+          item:[]
         },
         {
-          image:'t2',
-          icon:'lni-quotation',
-          para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
-          h5:'Alina',
-          subtitle:'Tesla Motors'
+          icon:false,
+          image:'logo2',
+          title:'Aadministrciones Autonómicas',
+          para:'',
+          delay:'0.8s',
+          item:[]
         },
         {
-          image:'t3',
-          icon:'lni-quotation',
-          para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
-          h5:'Celina',
-          subtitle:'CEO, Alo'
+          icon:false,
+          image:'logo3',
+          title:'Aadministrciones Locales',
+          para:'',
+          delay:'1.2s',
+          item:[]
+        },
+        {
+          icon:false,
+          image:'logo4',
+          title:'Empresas Privadas',
+          para:'',
+          delay:'0.4s',
+          item:[]
         }
       ]
-    },
-    contact:{
-      visibility:true
-    },
-    map:{
-      visibility:false
     },
     footer:{
       visibility:true,
@@ -967,232 +727,14 @@ module.exports = {
     }
   },
   contact:{
-    preloader:{
-      visibility:true,
-    },
-    header:{
-      visibility:true,
-      h4:"Your trusted",
-      h1:"<span>Interior</span> Design Partner for Home or Office",
-      link:{
-        hash:'#contact',
-        text:'Get a Free Quote'
-      }
-    },
-    about:{
-      visibility:false,
-      cta:'<span>27</span> Years Experience',
-      h4:'About Us',
-      h3:'Reasons to choose',
-      para:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages <br /> <br />It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      link:{
-        hash:'#',
-        text:'learn more'
-      }
-    },
-    services:{
-      visibility:false,
-      h5:'Our Services',
-      h2:'What We Do?',
-      cards:[
-        {
-          icon:"lni-paint-roller",
-          title:'Interior Design',
-          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-          delay:'0.4s'
-        },
-        {
-          icon:"lni-blackboard",
-          title:'Design Consultancy',
-          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-          delay:'0.8s'
-        },
-        {
-          icon:"lni-home",
-          title:'Residential Design',
-          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-          delay:'1.2s'
-        },
-        {
-          icon:"lni-briefcase",
-          title:'Commercial Design',
-          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-          delay:'0.4s'
-        },
-        {
-          icon:"lni-handshake",
-          title:'Hospitality Design',
-          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-          delay:'0.8s'
-        },
-        {
-          icon:"lni-grow",
-          title:'Co-working Space Design',
-          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-          delay:'1.2s'
-        }
-      ]
-    },
-    projects:{
-      visibility:true,
-      h5:'Featured Works',
-      h2:'Projects You May Love',
-      cards:[
-        {
-          image:'image1',
-          hash:'#',
-          link:'Home Interior Design'
-        },
-        {
-          image:'image2',
-          hash:'#',
-          link:'Home Interior Design'
-        },
-        {
-          image:'image3',
-          hash:'#',
-          link:'Home Interior Design'
-        },
-        {
-          image:'image4',
-          hash:'#',
-          link:'Home Interior Design'
-        },
-        {
-          image:'image5',
-          hash:'#',
-          link:'Home Interior Design'
-        },
-        {
-          image:'image4',
-          hash:'#',
-          link:'Home Interior Design'
-        },
-        {
-          image:'image2',
-          hash:'#',
-          link:'Home Interior Design'
-        }
-      ]
-    },
-    team:{
-      visibility: false,
-      h5:'Meet The Team',
-      h2:'Our Expert Designers',
-      cards:[
-        {
-          delay:'0.4s',
-          image:'image1',
-          link:'Rob Hope',
-          subtitle:'CEO & Founder',
-          social:[
-            {
-              hash:'#',
-              icon:'lni-facebook-filled'
-            },
-            {
-              hash:'#',
-              icon:'lni-twitter-original'
-            },
-            {
-              hash:'#',
-              icon:'lni-linkedin-original'
-            }
-          ]
-        },
-        {
-          delay:'0.8s',
-          image:'image2',
-          link:'Patric Green',
-          subtitle:'Chief Designer',
-          social:[
-            {
-              hash:'#',
-              icon:'lni-facebook-filled'
-            },
-            {
-              hash:'#',
-              icon:'lni-twitter-original'
-            },
-            {
-              hash:'#',
-              icon:'lni-linkedin-original'
-            }
-          ]
-        },
-        {
-          delay:'1.2s',
-          image:'image3',
-          link:'Daryl Dixon',
-          subtitle:'Consultant',
-          social:[
-            {
-              hash:'#',
-              icon:'lni-facebook-filled'
-            },
-            {
-              hash:'#',
-              icon:'lni-twitter-original'
-            },
-            {
-              hash:'#',
-              icon:'lni-linkedin-original'
-            }
-          ]
-        },
-        {
-          delay:'1.6s',
-          image:'image4',
-          link:'Mark Parker',
-          subtitle:'Intern',
-          social:[
-            {
-              hash:'#',
-              icon:'lni-facebook-filled'
-            },
-            {
-              hash:'#',
-              icon:'lni-twitter-original'
-            },
-            {
-              hash:'#',
-              icon:'lni-linkedin-original'
-            }
-          ]
-        }
-      ]
-    },
-    testimonial:{
-      visibility:true,
-      cards:[
-        {
-          image:'t1',
-          icon:'lni-quotation',
-          para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
-          h5:'Fajar',
-          subtitle:'Random Customer'
-        },
-        {
-          image:'t2',
-          icon:'lni-quotation',
-          para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
-          h5:'Alina',
-          subtitle:'Tesla Motors'
-        },
-        {
-          image:'t3',
-          icon:'lni-quotation',
-          para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
-          h5:'Celina',
-          subtitle:'CEO, Alo'
-        }
-      ]
-    },
     contact:{
-      visibility:true
+      visibility:true,
+      subtitle:'Consultanos sin Compromiso',
+      title:'Contáctnos',
     },
     map:{
-      visibility:false
+      visibility:false,
+      source:'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1574.503745914236!2d-4.775636719070887!3d37.883507487755296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6cdf7dd9f51d2b%3A0x45e07c5e2661266c!2sPlaza%20de%20la%20Corredera%2C%208%2C%2014002%20C%C3%B3rdoba!5e0!3m2!1ses!2ses!4v1629373914957!5m2!1ses!2ses'
     },
     footer:{
       visibility:true,

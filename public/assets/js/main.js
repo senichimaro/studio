@@ -9,22 +9,22 @@ $(function() {
     });
 
 
-    //===== Mobile Menu
 
-    $(".navbar-toggler").on('click', function() {
-        $(this).toggleClass('active');
-    });
+    // //===== Mobile Menu
+    // $(".navbar-toggler").on('click', function() {
+    //     $(this).toggleClass('active');
+    // });
+    //
+    // $(".navbar-nav a").on('click', function() {
+    //     $(".navbar-toggler").removeClass('active');
+    // });
+    //
+    // //===== close navbar-collapse when a  clicked
+    // $(".navbar-nav a").on('click', function () {
+    //   $(".navbar-collapse").removeClass("show");
+    // });
 
-    $(".navbar-nav a").on('click', function() {
-        $(".navbar-toggler").removeClass('active');
-    });
 
-
-    //===== close navbar-collapse when a  clicked
-
-    $(".navbar-nav a").on('click', function () {
-        $(".navbar-collapse").removeClass("show");
-    });
 
 
     //===== Sticky
@@ -39,8 +39,8 @@ $(function() {
     });
 
 
-    // ===== Section Menu Active
 
+    // ===== Section Menu Active
     var scrollLink = $('.page-scroll');
         // Active link switching
         $(window).scroll(function() {

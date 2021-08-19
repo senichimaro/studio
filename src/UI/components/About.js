@@ -1,17 +1,26 @@
 import { Link } from 'react-router-dom'
-// import { about } from '../data/data'
-
-
-
-import about1 from "../assets/images/about/about-1.png"
-import about2 from "../assets/images/about/about-2.png"
 
 
 import blueprint from "../assets/images/blueprint3.jpg"
 import empresa from "../assets/images/empresa3.jpg"
+import bussines2 from "../assets/images/bussines2.jpg"
+import meeting from "../assets/images/meeting.jpg"
+import woman from "../assets/images/woman.jpg"
+import beach from "../assets/images/beach.jpg"
+import center from "../assets/images/center.jpg"
 
 
 const About = ({visibility, about }) => {
+
+  const images = {
+    blueprint,
+    empresa,
+    bussines2,
+    meeting,
+    woman,
+    beach,
+    center
+  }
 
   if ( visibility ){
     return (
@@ -22,13 +31,13 @@ const About = ({visibility, about }) => {
                   <div className="col-lg-6">
                       <div className="about-image mt-50 clearfix">
                           <div className="single-image float-left">
-                              <img src={empresa} alt="About" />
+                              <img src={images[about.image1]} alt="About" />
                           </div>
                           <div data-aos="fade-right" className="about-btn">
                               <Link className="main-btn" to="#" dangerouslySetInnerHTML={{__html:about.cta}}></Link>
                           </div>
                           <div className="single-image image-tow float-right">
-                              <img src={blueprint} alt="About" />
+                              <img src={images[about.image2]} alt="About" />
                           </div>
                       </div>
                   </div>

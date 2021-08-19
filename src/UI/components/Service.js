@@ -1,6 +1,9 @@
 // import { services } from '../data/data'
 
-
+import logo1 from '../assets/images/logos/cherry.png'
+import logo2 from '../assets/images/logos/melon.png'
+import logo3 from '../assets/images/logos/carrot.png'
+import logo4 from '../assets/images/logos/onion.png'
 
 
 
@@ -22,8 +25,8 @@ const Service = ({visibility, services}) => {
               <div className="row justify-content-center">
 
                 {
-                  services.cards.map(({icon, title, para, delay, item}) => (
-                    <CardElement icon={icon} title={title} para={para} delay={delay} item={item} key={title}/>
+                  services.cards.map(({icon, image, title, para, delay, item}) => (
+                    <CardElement icon={icon} image={image} title={title} para={para} delay={delay} item={item} key={title}/>
                   ))
                 }
 
@@ -40,22 +43,41 @@ const Service = ({visibility, services}) => {
 }
 
 
-function CardElement({icon, title, para, delay, item}){
+function CardElement({icon, image, title, para, delay, item}){
+
+  const images = {
+    logo1,
+    logo2,
+    logo3,
+    logo4
+  }
+
   return (
     <div className="col-lg-4 col-md-6 col-sm-8">
         <div className="single-services text-center mt-30 wow fadeIn----Up" data-wow-duration="1.5s" data-wow-delay={delay}>
-            <div className="services-icon">
-                <i className={icon}></i>
-            </div>
+            {
+              icon
+              ? (
+                <div className="services-icon">
+                    <i className={icon}></i>
+                </div>
+              )
+              : (
+                <div className="services-icon">
+                    <img src={images[image]} alt="Corporate Building"/>
+                </div>
+              )
+            }
+
             <div className="services-content mt-15">
                 <h4 className="services-title">{title}</h4>
                 {
                   para
                   ? <p className="mt-20">{para}</p>
                   : (
-                    <ul class="list-group">
+                    <ul className="list-group">
                       {
-                        item.map( element => <CardItems element={element} />)
+                        item.map( element => <CardItems element={element} key={element}/>)
                       }
                     </ul>
                   )
