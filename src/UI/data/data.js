@@ -108,24 +108,12 @@ module.exports = {
     ]
   },
   home:{
-    preloader:{
-      visibility:true,
-    },
-    header:{
-      visibility:true,
-      h4:"Your trusted",
-      h1:"<span>Interior</span> Design Partner for Home or Office",
-      link:{
-        hash:'#contact',
-        text:'Get a Free Quote'
-      }
-    },
     about:{
       visibility:false,
       cta:'<span>27</span> Years Experience',
-      h4:'About Us',
-      h3:'Reasons to choose',
-      para:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages <br /> <br />It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      h4:'Nuestra Empresa',
+      h3:'Quienes Somos',
+      para:"Bienvenidos a la web corporativa de la empresa, somos un Estudio de Ingenieria Civil dedicado desde 1992 al desarrollo de proyectos  tecnicos y supervisión de obras de ingeniería civil, industrial, arquitectura y medioambiente. Nuestra meta es la satisfacción total de  nuestros clientes en cualquier fase del proceso de creación de una infraestructua, bien obra pública como privada.",
       link:{
         hash:'#',
         text:'learn more'
@@ -133,99 +121,87 @@ module.exports = {
     },
     services:{
       visibility:false,
-      h5:'Our Services',
-      h2:'What We Do?',
+      h5:'El proceso de Creación',
+      h2:'Servicios',
       cards:[
         {
           icon:"lni-paint-roller",
-          title:'Interior Design',
-          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-          delay:'0.4s'
+          title:'Planificación',
+          para:false,
+          delay:'0.4s',
+          item:[
+            "Estudios de Demanda",
+            "Geotecnia y Topografía",
+            "Impacto Ambiental"
+          ]
         },
         {
           icon:"lni-blackboard",
-          title:'Design Consultancy',
-          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-          delay:'0.8s'
+          title:'Proyecto',
+          para:false,
+          delay:'0.8s',
+          item:[
+            "Creación de Anteproyecto",
+            "Proyectos de Trazado",
+            "Proyectos de Construcción"
+          ]
         },
         {
           icon:"lni-home",
-          title:'Residential Design',
-          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-          delay:'1.2s'
+          title:'Obra',
+          para:false,
+          delay:'1.2s',
+          item:[
+            "Dirección de Obra",
+            "Seguimiento Ambiental",
+            "Control y Vigilancia de Obra"
+          ]
         },
         {
           icon:"lni-briefcase",
-          title:'Commercial Design',
-          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-          delay:'0.4s'
+          title:'Explotación',
+          para:false,
+          delay:'0.4s',
+          item:[
+            "Inventario de Infraestructura",
+            "Proyectos de Mantenimiento",
+            "Contratos Postclasura"
+          ]
         },
         {
           icon:"lni-handshake",
-          title:'Hospitality Design',
-          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-          delay:'0.8s'
+          title:'Asistencia',
+          para:false,
+          delay:'0.8s',
+          item:[
+            "Asistencia Técnica en Licitación",
+            "Memorias Valoradas",
+            "Coordinación de Seguridad y Salud"
+          ]
         },
         {
           icon:"lni-grow",
-          title:'Co-working Space Design',
-          para:'Mauris aliquam, turpis sed mattis placerat, justo risus pellentesque quam, id finibus risus arcu eget neque.',
-          delay:'1.2s'
-        }
-      ]
-    },
-    projects:{
-      visibility:true,
-      h5:'Featured Works',
-      h2:'Projects You May Love',
-      cards:[
-        {
-          image:'image1',
-          hash:'#',
-          link:'Home Interior Design'
-        },
-        {
-          image:'image2',
-          hash:'#',
-          link:'Home Interior Design'
-        },
-        {
-          image:'image3',
-          hash:'#',
-          link:'Home Interior Design'
-        },
-        {
-          image:'image4',
-          hash:'#',
-          link:'Home Interior Design'
-        },
-        {
-          image:'image5',
-          hash:'#',
-          link:'Home Interior Design'
-        },
-        {
-          image:'image4',
-          hash:'#',
-          link:'Home Interior Design'
-        },
-        {
-          image:'image2',
-          hash:'#',
-          link:'Home Interior Design'
+          title:'Estudios Afines',
+          para:false,
+          delay:'1.2s',
+          item:[
+            "Estudios de Viabilidad",
+            "Estudios de Anteproyecto",
+            "Estudios Informativos"
+          ]
         }
       ]
     },
     team:{
       visibility: false,
-      h5:'Meet The Team',
-      h2:'Our Expert Designers',
+      h5:'Centros de Trabajo',
+      h2:'Nuestras Oficinas',
       cards:[
         {
           delay:'0.4s',
-          image:'image1',
-          link:'Rob Hope',
-          subtitle:'CEO & Founder',
+          image:'office1',
+          link:'Burgos',
+          subtitle:'Santo del Platano 22',
           social:[
             {
               hash:'#',
@@ -243,9 +219,9 @@ module.exports = {
         },
         {
           delay:'0.8s',
-          image:'image2',
-          link:'Patric Green',
-          subtitle:'Chief Designer',
+          image:'office2',
+          link:'León',
+          subtitle:'C/ Cinco Herman0s 7º Q',
           social:[
             {
               hash:'#',
@@ -263,9 +239,9 @@ module.exports = {
         },
         {
           delay:'1.2s',
-          image:'image3',
-          link:'Daryl Dixon',
-          subtitle:'Consultant',
+          image:'office5',
+          link:'Madrid',
+          subtitle:'Vía del Padro Quinque 17',
           social:[
             {
               hash:'#',
@@ -283,9 +259,9 @@ module.exports = {
         },
         {
           delay:'1.6s',
-          image:'image4',
-          link:'Mark Parker',
-          subtitle:'Intern',
+          image:'office4',
+          link:'Barcelona',
+          subtitle:'Rambla Mayor 11 2º B',
           social:[
             {
               hash:'#',
@@ -302,38 +278,6 @@ module.exports = {
           ]
         }
       ]
-    },
-    testimonial:{
-      visibility:true,
-      cards:[
-        {
-          image:'t1',
-          icon:'lni-quotation',
-          para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
-          h5:'Fajar',
-          subtitle:'Random Customer'
-        },
-        {
-          image:'t2',
-          icon:'lni-quotation',
-          para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
-          h5:'Alina',
-          subtitle:'Tesla Motors'
-        },
-        {
-          image:'t3',
-          icon:'lni-quotation',
-          para:'Lorem ipsum dolor sit amet, ectetur adipiscing elit. Phasellus vel erat ces, commodo lectus eu, finibus diam. m ipsum dolor sit amet, ectetur.',
-          h5:'Celina',
-          subtitle:'CEO, Alo'
-        }
-      ]
-    },
-    contact:{
-      visibility:true
-    },
-    map:{
-      visibility:false
     },
     footer:{
       visibility:true,

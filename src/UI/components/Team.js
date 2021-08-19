@@ -7,6 +7,11 @@ import image2 from "../assets/images/team/team-2.jpg"
 import image3 from "../assets/images/team/team-3.jpg"
 import image4 from "../assets/images/team/team-4.jpg"
 
+import office1 from "../assets/images/office1.jpg"
+import office2 from "../assets/images/office2.jpg"
+import office3 from "../assets/images/office3.jpg"
+import office4 from "../assets/images/office4.jpg"
+import office5 from "../assets/images/office5.jpg"
 
 
 
@@ -16,7 +21,12 @@ const Team = ({visibility, team}) => {
     image1: image1,
     image2: image2,
     image3: image3,
-    image4: image4
+    image4: image4,
+    office1,
+    office2,
+    office3,
+    office4,
+    office5,
   }
 
   if ( visibility ) {
