@@ -8,6 +8,7 @@ import { nav } from '../data/data'
 
 const Nav = ({ visibility }) => {
 
+
   /** # Serve routes dynamicly
    * depend of their availability on  current path
   */
@@ -30,6 +31,18 @@ const Nav = ({ visibility }) => {
   function _handleClick( event ){
     const url = event.target.getAttribute( 'href' )
     loadRoutes( nav , url )
+
+    // close navbar
+    closeNavbar()
+  }
+
+  const closeNavbar = () => {
+    const navActive = document.querySelector('.navbar-toggler')
+    const navShow = document.querySelector('.navbar-collapse.collapse.show')
+    if ( navActive && navShow ){
+      navActive.classList.toggle('collapsed')
+      navShow.classList.toggle('show')
+    }
   }
 
   if ( visibility ){

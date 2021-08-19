@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 
 
-const Contact = ({visibility}) => {
+const Contact = ({visibility, contact}) => {
 
   const [isData, setIsData] = useState({
     name:'',
@@ -33,8 +33,8 @@ const Contact = ({visibility}) => {
               <div className="row justify-content-center">
                   <div className="col-lg-6">
                       <div className="section-title text-center pb-20">
-                          <h5 className="sub-title mb-15">Contact us</h5>
-                          <h2 className="title">Get In touch</h2>
+                          <h5 className="sub-title mb-15">{contact.subtitle}</h5>
+                          <h2 className="title">{contact.title}</h2>
                       </div>
                   </div>
               </div>

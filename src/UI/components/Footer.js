@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 // import { footer } from '../data/data'
 
 
-// import logo from '../assets/images/logo.png'
+import logo from '../assets/images/logos/logo.png'
 
 
 const Footer = ({visibility, footer}) => {
@@ -33,8 +33,8 @@ const Footer = ({visibility, footer}) => {
 
                       <div className="col-lg-3 col-md-4 col-sm-8">
                           <div className="footer-logo mt-50">
-                              <Link to="#">
-                                  {/*<img src={logo} alt="Logo" />*/}
+                              <Link to="/">
+                                  <img style={{width:"80px"}} src={logo} alt="Logo" />
                               </Link>
 
                               <ul className="footer-info">

@@ -1,11 +1,15 @@
 import { Link } from 'react-router-dom'
-// import { team } from '../data/data'
 
+import office1 from "../assets/images/office1.jpg"
+import office2 from "../assets/images/office2.jpg"
+import office4 from "../assets/images/office4.jpg"
+import office5 from "../assets/images/office5.jpg"
 
-import image1 from "../assets/images/team/team-1.jpg"
-import image2 from "../assets/images/team/team-2.jpg"
-import image3 from "../assets/images/team/team-3.jpg"
-import image4 from "../assets/images/team/team-4.jpg"
+import buildingRed from "../assets/images/buildingRed.jpg"
+import corp from "../assets/images/corp.jpg"
+import wind from "../assets/images/wind.jpg"
+import solar from "../assets/images/solar.jpg"
+
 
 
 
@@ -13,10 +17,14 @@ import image4 from "../assets/images/team/team-4.jpg"
 const Team = ({visibility, team}) => {
 
   const images = {
-    image1: image1,
-    image2: image2,
-    image3: image3,
-    image4: image4
+    office1,
+    office2,
+    office4,
+    office5,
+    buildingRed,
+    corp,
+    wind,
+    solar
   }
 
   if ( visibility ) {
